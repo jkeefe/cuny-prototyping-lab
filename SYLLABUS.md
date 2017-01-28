@@ -1,6 +1,18 @@
 # Syllabus
 
-Basic components of this class.
+Welcome to the prototyping lab! 
+
+## Class Description
+
+How to get journalism to audiences has been a challenge for decades. And with the unconventional campaign and subsequent election of Donald Trump for president, that's become an even bigger question for news organizations. Come explore what's next in news delivery and prototype your ideas. Throughout the industry, we see that the ability to build journalistic products is key, not just in startups from Vox to Quartz but also in big media companies of all sorts, from The New York Times to CNN to WNYC to a metro newspaper. This class will help you imagine and prototype new products and services -- and in the process reimagine journalism itself and how it connects with and serves the public. 
+
+We'll develop and test your ideas using methods from paper prototyping and the latest technologies. We'll quickly see what works and what doesn't. We'll experiment with telling news stories through channels such as instant messaging, watches, intelligent agents like Siri and Alexa and even household objects. You will learn essential skills to develop, grow, test and retry how you tell stories -- and may even start a viable product. 
+
+This laboratory is great for anyone who wants to have an edge in the changing media landscape, gain confidence in technology, learn a little code, explore ideas of their own or actually change how we consume journalism. Students will get hands-on experience with several initial prototypes and then pursue a larger project in pairs or small teams. No prior technical or coding experience required, though such skills will be helpful and welcome.
+
+## Spirit
+
+We're going to learn how to play, experiment, learn and tinker -- all with the goal of making new ways to experience and information. And that includes everyone. So participation is key. Let's have some fun and make great things.
 
 ## Schedule
 
@@ -63,5 +75,15 @@ There are 100 points possible in this class.
 | 73-76 | C |
 | 70-72 | C- |
 | < 70 | F |
+
+## Plagiarism
+
+This is a journalism class; facts and honesty are our greatest asset. Presenting the work of others as your own is wrong and won't be tolerated. Doing so may result in a significant reduction of accumulated points and possible failure of the class.
+
+When using code or ideas from other sources -- even free, open-sourced code -- be sure to include references and links back to that code and any applicable licenses.
+
+If you are inspired by others, note it. It's just right.
+
+And when working on teams, you may be asked to honestly note the specific and/or relative contributions of each teammate.
 
 
