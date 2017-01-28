@@ -4,7 +4,7 @@ Basic components of this class.
 
 ## Schedule
 
-The schedule for this class is [here](SCHEDULE.md). Please note there is one week scheduled week with no class and one day class happens on a Thursday.
+The schedule for this class is [here](SCHEDULE.md). Please note there is no class President's Day week (even though your other Monday classes will meet on Wednesday that week) and that one week we meet on Thursday (April 20) instead of Monday.
 
 ## Logistics
 
