@@ -42,7 +42,7 @@ _Assignents due next week:_
 * Submit you Eagle files (if you haven't done so in class).
 * Write two paragraphs describing your prototyping project._
 
-## Week 6 * Monday, March 13, 2017
+## Week 6 • Monday, March 13, 2017
 
 **Paper Prototyping / Presentations / Cardboard Prototyping**
 
