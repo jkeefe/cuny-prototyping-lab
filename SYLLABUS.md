@@ -12,7 +12,7 @@ This laboratory is great for anyone who wants to have an edge in the changing me
 
 ## Spirit
 
-We're going to learn how to play, experiment, learn and tinker -- all with the goal of making new ways to experience and information. And that includes everyone. So participation is key. Let's have some fun and make great things.
+We're going to learn how to play, experiment, learn and tinker -- all with the goal of making new ways to experience and consume information. This is a hands-on class, and participation is key. Let's have some fun and make great things.
 
 ## Schedule
 
