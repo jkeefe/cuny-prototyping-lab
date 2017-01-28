@@ -1,3 +1,10 @@
-This is the initial repo for the prototyping lab at the CUNY Graduate School of Journalism. 
+# CUNY Prototyping Lab - News(Re)From Class
 
-The lab itself is being prototyped as the News(Re)From Class for Spring 2017.
+This class is a prototyping lab at the CUNY Graduate School of Journalism which, itself, is a prototype for how to instill a sense of creative play and production in the digital age.
+
+The current iteration of this class is for Sprint 2017.
+
+## Contents
+
+* [Syllabus](SYLLABUS.md)
+* [Schedule](SCHEDULE.md)
