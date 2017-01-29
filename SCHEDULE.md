@@ -6,6 +6,8 @@
 
 We'll get to know each other, talk about what we're bringing to the class and play with some texting projects.
 
+[-> Plans and notes](week01)
+
 _Assignent due next week: List 10 ways you might use SMS in your project, with a descriptive paragraph for each. Put those in a file in the Google Drive folder. Storyboard one of them on paper, and bring it to class._
 
 ## Week 2 • Monday, February 6, 2017
