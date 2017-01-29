@@ -18,22 +18,6 @@ We'll get to know each other, talk about what we're bringing to the class and pl
         * Flow
             - phone -> twilio -> server -> screen
             
-### Class Logistics 
-
-* Names
-* Github
-* Syllabus
-* Schedule
-* Slack Setup
-
-### Intro to Prototyping
-
-* A brief guide to Design Thinking
-* Bootcamp Bootleg: http://bit.ly/d-thinking-bootleg
-* Your user's POV
-
-### More SMS
-            
 * Pets demo
     * text the number
     * walk through process
@@ -73,7 +57,21 @@ We'll get to know each other, talk about what we're bringing to the class and pl
 * Consider how you might use sms in your projects
     * Can get some of your assignment done now!
     * Let's architect some of them
-    
+
+### Class Logistics 
+
+* Names
+* Github
+* Syllabus
+* Schedule
+* Slack Setup
+
+### Intro to Prototyping
+
+* A brief guide to Design Thinking
+* Building blocks
+* Bootcamp Bootleg: http://bit.ly/d-thinking-bootleg
+* Your user's POV    
 
 ## I like, I wish, What if?
 
