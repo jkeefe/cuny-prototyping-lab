@@ -8,7 +8,13 @@ We'll get to know each other, talk about what we're bringing to the class and pl
 
 [-> Plans and notes](week01)
 
-_Assignent due next week: List 10 ways you might use SMS in your project, with a descriptive paragraph for each. Put those in a file in the Google Drive folder. Storyboard one of them on paper, and bring it to class._
+_Assignent due next week:_
+* List 10 ways you might use SMS in your project, with a descriptive paragraph for each. Alter the POV if you need to.
+* Storyboard one of them on sheets of paper or post-its, simulating the text experience. Bring the sheets to class.
+* Read [Bootcamp Bootleg](http://bit.ly/d-thinking-bootleg) :
+	* PDF pages 1-8 (through Mode:Test)
+	* PDF page 36 (Prototype for Empathy) to page 43 (Feedback Capture Grid)
+	* As much of the rest as you'd like. It's all good.
 
 ## Week 2 • Monday, February 6, 2017
 

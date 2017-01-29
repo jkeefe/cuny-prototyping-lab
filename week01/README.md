@@ -4,8 +4,6 @@
 
 We'll get to know each other, talk about what we're bringing to the class and play with some texting projects.
 
-_Assignent due next week: List 10 ways you might use SMS in your project, with a descriptive paragraph for each. Put those in a file in the Google Drive folder. Storyboard one of them on paper, and bring it to class._
-
 ## Plan
 
 ### SMS Texting
@@ -20,13 +18,19 @@ _Assignent due next week: List 10 ways you might use SMS in your project, with a
         * Flow
             - phone -> twilio -> server -> screen
             
-### Class Intro
+### Class Logistics 
 
 * Names
 * Github
 * Syllabus
 * Schedule
 * Slack Setup
+
+### Intro to Prototyping
+
+* A brief guide to Design Thinking
+* Bootcamp Bootleg: http://bit.ly/d-thinking-bootleg
+* Your user's POV
 
 ### More SMS
             
@@ -71,8 +75,17 @@ _Assignent due next week: List 10 ways you might use SMS in your project, with a
     * Let's architect some of them
     
 
-## I like, I wish, I wonder
+## I like, I wish, What if?
 
+
+## Assignment Due Next Week
+
+* List 10 ways you might use SMS in your project, with a descriptive paragraph for each. Alter the POV if you need to.
+* Storyboard one of them on sheets of paper or post-its, simulating the text experience. Bring the sheets to class.
+* Read [Bootcamp Bootleg](http://bit.ly/d-thinking-bootleg) :
+	* PDF pages 1-8 (through Mode:Test)
+	* PDF page 36 (Prototype for Empathy) to page 43 (Feedback Capture Grid)
+	* As much of the rest as you'd like. It's all good.
 
 ## Post-class Instructor Notes
 
