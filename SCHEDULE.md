@@ -80,51 +80,46 @@ Everyone will present on their project progress, and we'll critique each other a
 _Assignent due next week: Refine your project and submit your plan. Prepare for your workshop and presentation._
 
 ## Week 9 • Monday, April 3, 2017
-**Everyone Workshops Project 1**
 
-As a class, we'll workshop, code, build and explore one person's project.
+**Everyone Workshops Project 1 & 2**
+
+As a class, we'll workshop, code, build and explore two classmates' projects.
 
 _Assignent due next week: Your progress notes to date. Include steps you've taken, tests, feedback, and next steps._
 
 ## Week10 • Thursday, April 20, 2017
 
-**Everyone Workshops Project 2**
+**Everyone Workshops Project 3 & 4**
 
-As a class, we'll workshop, code, build and explore one person's project.
+As a class, we'll workshop, code, build and explore two classmates' projects.
 
 _Assignent due next week: Your progress notes. Include steps you've taken, tests, feedback, and next steps._
 
 ## Week 11 • Monday, April 24, 2017
 
-**Everyone Workshops Project 3**
+**Everyone Workshops Project 5 & 6**
 
-As a class, we'll workshop, code, build and explore one person's project.
+As a class, we'll workshop, code, build and explore two classmates' projects.
 
 _Assignent due next week: Your progress notes. Include steps you've taken, tests, feedback, and next steps._
 
 ## Week 12 • Monday, May 1, 2017
 
-**Everyone Workshops Project 4**
+**Everyone Workshops Project 7 & 8**
 
-As a class, we'll workshop, code, build and explore one person's project.
+As a class, we'll workshop, code, build and explore two classmates' projects.
 
 _Assignent due next week: Your progress notes. Include steps you've taken, tests, feedback, and next steps._
 
 ## Week 13 • Monday, May 8, 2017
 
-**Everyone Workshops Project 5**
+**Everyone Workshops Project 9 + Open Lab/Help**
 
-As a class, we'll workshop, code, build and explore one person's project.
-
-_Assignent due next week: Your progress notes. Include steps you've taken, tests, feedback, and next steps._
-
-## Week 14 • Monday, May 15, 2017
-
-**Open Lab and Wrap-up Help**
+As a class, we'll workshop, code, build and explore one person's project. Then we'll provide each other help with the last steps of their projects.
 
 _Assignent due next week: Complete your final presentation._
 
-## Week 15 • Monday, May 22, 2017
+## Week 14 • Monday, May 15, 2017
 
 **Final Presentations and Demonstrations**
 
