@@ -24,11 +24,13 @@ Alexa, Siri and many other agents are now a part of our world. Let's play with s
 
 _Assignent due next week: List 5 possible bots for your project. Pick one. List or storyboard how it would work, including at least 5 different intents, what each intent would do and what other factors you'd need to answer the intended question or command._
 
-## Week 3 • Wednesday, February 15, 2017
+## Week 3 • Monday, February 13, 2017
+
+**Data and Personal Security & Project Discussions**
+
+## Week of February 20, 2017
 
 **No Class**
-
-_Assignent due next week: Sign up for one-on-one week of March 20._
 
 ## Week 4 • Monday, February 27, 2017
 
