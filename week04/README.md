@@ -88,21 +88,32 @@ Us for action:
     
     - Open [tweet_this.js](https://github.com/jkeefe/cuny-prototyping-lab/blob/master/week04/tweet_this.js) on Github
     - Look at the "raw" version (click the "Raw") button
-    - Save that page as tweet_this.js
-        - Open in your Text Editor
-    - (or Copy-paste this into your text editor)
-    - Replace all the keys
+    - Copy-paste this into your text editor
+    - Replace all the keys with your actual info
     - Replace the "test text"
     - Save
-    - From the command line, run 
+    - We need to install a couple of helper apps, including node-twitter-api:
     
     `npm init --yes`
     `npm install request node-twitter-api --save`
+    
+    - Then run your program! (Just do it once, tho!)
+    
     `node tweet_this.js`
 
+    - Check your twitter account!
+    
+Now let's make it a bit more sophisticated!
 
-    ----
+    - Go to https://github.com/jkeefe/cuny-prototyping-lab/blob/master/week04/getweather.js
+    - Click "raw"
+    - Copy-paste that into your editor
+    - Change the keys to your own again, including darksky
+    - save as getweather.js
+    
+    
 
+----
     
 # Your own computer in the cloud
 
@@ -163,108 +174,22 @@ You in? If so, there are some things we need to install, including "node" and th
     sudo ln -s /usr/bin/nodejs /usr/bin/node
 ```
 
-Upload our file using `scp` secure copy.
+And let's install those helper libraries we needed:
 
-Finally, we're using some pre-programmed javascript to include.
+`npm init --yes`
+`npm install request node-twitter-api --save`
 
-    `npm install`
+
+Upload our file using `scp` (secure copy).
+
+    `scp getweather.js ubuntu@XX.XX.XX.XX`
 
 Now try the script.
 
     `node getweather.js`
 
 Did it work?
-    		
-Now let's go get the upcoming day's precipitation, which is under the "daily" part of the data. Here's the full tree ...
-
-    		var rain_chance = weather.daily.data[0].precipProbability;
-
-    		console.log(rain_chance);
-    		
-Now let's make some conditional. Do we need an umbrella?
-
-    		if (rain_chance > 0.5){
-    			console.log("Bring your umbrella!");
-    		} else {
-    			console.log("No umbrella needed!");
-    		}
-    	
-
-##Let's tweet it!
-
-Need to add another module:
-
-    npm install node-twitter-api
-    
-We also need to create a new twitter app for your existing twitter account. 
-
-FYI, you may not want to do this right now -- or ever! It will Tweet out at your account! You may want to make a new Twitter account. Either way, you log into the account you plan to use and go here:
-
-    twitter.com/apps
-    
-
-
-Then back to the code, put this on top, right under `request = require('request');`
-
-    var twitterAPI = require('node-twitter-api');
-    var twitter = new twitterAPI({
-        consumerKey: 'YOUR_KEY',
-        consumerSecret: 'YOUR_SECRET'
-    });
-    var accessToken = "YOUR_TOKEN";
-    var accessTokenSecret ="YOUR_TOKEN_SECRET";
-	
-Go in an change the varialbes in all caps, like YOUR_KEY, to your actual key, preserving the quotes. So:
-
-	consumerKey: '1234gibberish987moregibbersish' ...
-	
-And so on.
-    
-And back below the umbrella code, add this:
-
-	twitter.statuses("update", {
-	        status: "This is a test of my bot."
-	    },
-	    accessToken,
-	    accessTokenSecret,
-	    function(error, data, response) {
-	        if (error) {
-	            // something went wrong
-	        } else {
-	            // data contains the data sent by twitter
-	        }
-	    }
-	);
-	
-Testing it from the command line ...
-    
-    node getweather.js
-
-Check your Twitter account! Did it tweet?!
-
-
-Now let's make it tweet about your umbrella. Change the weather code slightly:
-
-    var umbrella_text = "";
-    if (rain_chance > 0.5){
-    	console.log("Bring your umbrella!");
-    	umbrella_text ="May want to bring your umbrella today!";
-    } else {
-    	console.log("No umbrella needed!");
-    	umbrella_text ="You can leave your umbrella at home today!";
-    }
-
-And let's change the tweet from "This is a test of my bot" to be `umbrella_text`, whatever it may be today.
-
-		twitter.statuses("update", {
-		        status: ummbrella_text
-		    },
-
-Testing it from the command line ...
-    
-    node getweather.js
-	
-Did it work?
+    			
 
 
 ##Make it happen every day at 7 a.m.
