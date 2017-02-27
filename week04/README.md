@@ -86,7 +86,7 @@ Us for action:
     
     - Open your text editor and navigate to this `prototyping` directory
     
-    - Open "tweet_this.js" on Github
+    - Open [tweet_this.js](https://github.com/jkeefe/cuny-prototyping-lab/blob/master/week04/tweet_this.js) on Github
     - Look at the "raw" version (click the "Raw") button
     - Save that page as tweet_this.js
         - Open in your Text Editor
