@@ -1,0 +1,294 @@
+## Week 4 • Monday, February 27, 2017
+
+**APIs & SDKs**
+
+I like to call API's "Another Person's Information" -- services out there you can use to build a unique offering of your own. SDKs are "Software Development Kits" that let you tinker with real-world objects like the iPhone and Amazon Echo. We'll get our hands into some code today.
+
+_Assignent due next week:_
+* Find 10 APIs that might be useful to your project. Give me the title, the URL and how you might use it. 
+* Install Eagle on your computer from   http://www.autodesk.com/products/eagle/overview
+
+## Plan
+
+### API overview
+
+Use for reference:
+    - Google Geocoder
+    - ProPublica Congressional API
+    
+Real time info:
+    - darksky.net
+    - Earthquakes
+    - MTA bus info
+    
+Us for action:
+    - Twilio (phone calls & text messages)
+    - Particle.io (make physical things happen)
+    - Twitter (read/send tweets)
+
+
+### A Word about text editors
+
+    - Textwrangler
+    - Atom
+    - TextEdit (in plain-text mode)
+
+### Dig into some APIs
+
+    - Dark Sky API
+        - http://darksky.net/dev
+        - sign up for an account
+        - see your key
+        - try your key
+        - looks like a mess!
+            - extensions
+            - Jsonview
+        - toy with the lat/lon
+    
+    - Propublica's congressional api
+        - https://www.propublica.org/datastore/api/propublica-congress-api
+    
+    - Twilio API
+        - John Demo's how easy it is with place_call.js
+        
+    
+    - Examine the Twitter API
+        - Authentication OAuth
+        - The wonder of libraries
+        - Look at node-twitter-api
+        - Install npm
+        - install node-twitter-api:
+            - `npm install node-twitter-api --save`
+
+
+### Let's Tweet
+
+    - Log in to twitter
+    - Go to http://twitter.com/apps
+        
+        Create an app, filling out the required boxes. I'm giving this short shrift here, but take some time to look through it. A couple of tips, tho:
+
+        	- You can ignore the callback part
+        	- Access level should be both READ and WRITE
+        	- You need to click on the link, "manage keys and access tokens"
+        	- You're going to need the following long strings of characters
+        		* Consumer Key
+        		* Consumer Secret
+        		* Access Token
+        		* Access Token Secret
+        	- The last two you may have to generate with a click of a button
+        
+    - Open terminal
+    - type `cd ~`
+    - type `cd Documents`
+    - type `mkdir prototyping`
+    - type `cd prototyping`
+    
+    - Open your text editor and navigate to this `prototyping` directory
+    
+    - Open "tweet_this.js" on Github
+    - Look at the "raw" version (click the "Raw") button
+    - Save that page as tweet_this.js
+        - Open in your Text Editor
+    - (or Copy-paste this into your text editor)
+    - Replace all the keys
+    - Replace the "test text"
+    - Save
+    - From the command line, run 
+    
+    `npm init --yes`
+    `npm install request node-twitter-api --save`
+    `node tweet_this.js`
+
+
+    ----
+
+    
+# Your own computer in the cloud
+
+    - Build a computer in the cloud
+    - Tweet from there
+    - A hint at lambda
+
+First a quick discussion about EC2 v S3.
+
+**S3** holds static files, such as html and js files. If you use it as a web hosting place, which is common, you just want to make sure all the files are public.
+
+So that poses a problem when you have API keys!
+
+**EC2** is a live computer where you can run programs -- including programs that use your API keys. 
+
+##Fire Up Your Cloud Computer
+
+- go to [http://aws.amazon.com](http://aws.amazon.com)
+- Sign up with your Amazon account. You will be asked for your credit card, and spending money is possible here. But today's steps involve spinning up a "micro" server which will run a year for free. You'll want to shut it down to avoid being charged in a year!
+- Go to the AWS Management Console
+- If you don't see "N. Virginia" next to your name at the top, change it to that
+- Pick EC2
+- Launch an instance!
+- Pick Ubuntu
+- pick the t2.micro (it's free for a year!)
+- Leave all of the configuration details as is, click Next ...
+- Leave the storage details as is, click Next ...
+- Opposite the "name" box, put in a name for your computer. Like `My First Cloud Computer`, click next ...
+- Despite the warning, leave security group things as is (This is not the best practice, but more on that in class)
+- Click `Review and Launch`
+- Click `Launch`
+- Change the next menu to "Create a New Key Pair"
+- You'll get a file downloaded. Put that on your desktop. You'll need it in a bit.
+
+Great! Before you continue, we have to fix something on that key you just downloaded to give it the right permissions.
+
+Open your Terminal program. Type:
+
+    `chmod 400 [path to pem file]`
+
+Need to grab the key and put it in our hand
+
+    `ssh-add [path to pem file]`
+    
+##Log into your new computer and set things up!
+
+Now we can log in. You get the IP address by clicking on the EC2 instance in your Amazon console at aws.amazon.com and looking at the "Public IP":
+
+    `ssh ubuntu@<public IP>`
+	( like ssh ubuntu@12.34.56.78 )
+        
+You in? If so, there are some things we need to install, including "node" and the node package manager, "npm"
+
+```
+    sudo apt-get update
+    sudo apt-get install nodejs
+    sudo apt-get install npm
+    sudo ln -s /usr/bin/nodejs /usr/bin/node
+```
+
+Upload our file using `scp` secure copy.
+
+Finally, we're using some pre-programmed javascript to include.
+
+    `npm install`
+
+Now try the script.
+
+    `node getweather.js`
+
+Did it work?
+    		
+Now let's go get the upcoming day's precipitation, which is under the "daily" part of the data. Here's the full tree ...
+
+    		var rain_chance = weather.daily.data[0].precipProbability;
+
+    		console.log(rain_chance);
+    		
+Now let's make some conditional. Do we need an umbrella?
+
+    		if (rain_chance > 0.5){
+    			console.log("Bring your umbrella!");
+    		} else {
+    			console.log("No umbrella needed!");
+    		}
+    	
+
+##Let's tweet it!
+
+Need to add another module:
+
+    npm install node-twitter-api
+    
+We also need to create a new twitter app for your existing twitter account. 
+
+FYI, you may not want to do this right now -- or ever! It will Tweet out at your account! You may want to make a new Twitter account. Either way, you log into the account you plan to use and go here:
+
+    twitter.com/apps
+    
+
+
+Then back to the code, put this on top, right under `request = require('request');`
+
+    var twitterAPI = require('node-twitter-api');
+    var twitter = new twitterAPI({
+        consumerKey: 'YOUR_KEY',
+        consumerSecret: 'YOUR_SECRET'
+    });
+    var accessToken = "YOUR_TOKEN";
+    var accessTokenSecret ="YOUR_TOKEN_SECRET";
+	
+Go in an change the varialbes in all caps, like YOUR_KEY, to your actual key, preserving the quotes. So:
+
+	consumerKey: '1234gibberish987moregibbersish' ...
+	
+And so on.
+    
+And back below the umbrella code, add this:
+
+	twitter.statuses("update", {
+	        status: "This is a test of my bot."
+	    },
+	    accessToken,
+	    accessTokenSecret,
+	    function(error, data, response) {
+	        if (error) {
+	            // something went wrong
+	        } else {
+	            // data contains the data sent by twitter
+	        }
+	    }
+	);
+	
+Testing it from the command line ...
+    
+    node getweather.js
+
+Check your Twitter account! Did it tweet?!
+
+
+Now let's make it tweet about your umbrella. Change the weather code slightly:
+
+    var umbrella_text = "";
+    if (rain_chance > 0.5){
+    	console.log("Bring your umbrella!");
+    	umbrella_text ="May want to bring your umbrella today!";
+    } else {
+    	console.log("No umbrella needed!");
+    	umbrella_text ="You can leave your umbrella at home today!";
+    }
+
+And let's change the tweet from "This is a test of my bot" to be `umbrella_text`, whatever it may be today.
+
+		twitter.statuses("update", {
+		        status: ummbrella_text
+		    },
+
+Testing it from the command line ...
+    
+    node getweather.js
+	
+Did it work?
+
+
+##Make it happen every day at 7 a.m.
+
+We're going to create a "cron job." That's a little command to run something at a particular time, or at particular intervals. It's a little cryptic, but what we want to add here is a command to execute 'node getweather.js' every day at 7 a.m.
+
+To do this, we edit the cron file from the command line:
+
+    crontab -e
+
+Pick "nano" as your text editor.
+
+There's info in the file there about how it works. We're going to add in the following line at the end of the file:
+
+	0 7 * * * node /home/ubuntu/getweather.js
+
+Make sure you end that line with a carriage return, or it won't execute! (I have often made this mistake.)
+
+Note that we use the _full_ path for the getweather.js file, which is: `/home/ubuntu/getweather.js`
+
+Now you're set. Check it tomorrow at 7 a.m.
+
+  
+## I like, I wish, What if?
+
+## Post-class Notes
+

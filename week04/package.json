@@ -1,0 +1,17 @@
+{
+  "name": "week04",
+  "version": "1.0.0",
+  "description": "**APIs & SDKs**",
+  "main": "getweather.js",
+  "dependencies": {
+    "node-twitter-api": "^1.8.0",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
