@@ -21,14 +21,14 @@ request(url, function (error, response, body) {
   console.log(data.features[0].properties.mag);
   
   var quake = data.features[0];
-  
-  console.log("lon:", quake.geometry.coordinates[0]);
-  console.log("lat:", quake.geometry.coordinates[1]);
-  console.log("depth:", quake.geometry.coordinates[2]);
-  console.log("magnitude", quake.properties.mag);
-  console.log("place", quake.properties.place); 
-  
+    
   if (quake.properties.time > last_quake.time) {
+      
+      console.log("lon:", quake.geometry.coordinates[0]);
+      console.log("lat:", quake.geometry.coordinates[1]);
+      console.log("depth:", quake.geometry.coordinates[2]);
+      console.log("magnitude", quake.properties.mag);
+      console.log("place", quake.properties.place); 
       
       var quaketime = moment(quake.properties.time).format('MMMM Do YYYY [at] h:mm:ss a [ET]');
       console.log("time", quaketime );
@@ -56,7 +56,7 @@ request(url, function (error, response, body) {
               // other text-based presentations and interpreters
               var mediaIdStr = data.media_id_string;
               
-              var altText = "QUAKE! Magnitude " + quake.properties.mag + " " + quake.properties.place + " on " + quaketime +".";
+              var altText = "QUAKE! Magnitude " + quake.properties.mag + ", " + quake.properties.place + " on " + quaketime +".";
               
               var meta_params = { media_id: mediaIdStr, alt_text: { text: altText } };
 
@@ -89,7 +89,7 @@ request(url, function (error, response, body) {
       
   } else {
       
-      console.log("no new quake");
+     //  console.log("no new quake");
 
   }
   
