@@ -30,7 +30,7 @@ request(url, function (error, response, body) {
       console.log("magnitude", quake.properties.mag);
       console.log("place", quake.properties.place); 
       
-      var quaketime = moment(quake.properties.time).format('MMMM Do YYYY [at] h:mm:ss a [ET]');
+      var quaketime = moment(quake.properties.time).format('MMMM Do YYYY [at] h:mm a [ET]');
       console.log("time", quaketime );
       
       quake.properties.mapurl = "https://maps.googleapis.com/maps/api/staticmap?center=" + quake.geometry.coordinates[1] + "," + quake.geometry.coordinates[0] +  "&zoom=5&size=600x500&maptype=roadmap&markers=color:red%7C" + quake.geometry.coordinates[1] + "," + quake.geometry.coordinates[0];
