@@ -26,6 +26,7 @@ So that poses a problem when you have API keys!
 - go to [http://aws.amazon.com](http://aws.amazon.com)
 - Sign up with your Amazon account. You will be asked for your credit card, and spending money is possible here. But today's steps involve spinning up a "micro" server which will run a year for free. You'll want to shut it down to avoid being charged in a year!
 - Go to the AWS Management Console
+- Pick the "Basic" plan
 - If you don't see "N. Virginia" next to your name at the top, change it to that
 - Pick EC2
 - Launch an instance!

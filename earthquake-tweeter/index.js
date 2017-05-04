@@ -2,6 +2,7 @@ var request = require('request');
 var moment = require('moment');
 var fs = require('fs');
 var Twit = require('twit');
+var Jimp = require("jimp");
 var keys = require('../../keys/bigsandboxkeys');
 var last_quake = require('./last_quake.json');
 
@@ -33,6 +34,8 @@ request(url, function (error, response, body) {
       var quaketime = moment(quake.properties.time).format('MMMM Do YYYY [at] h:mm a [ET]');
       console.log("time", quaketime );
       
+      var quaketime_image = moment(quake.properties.time).format('kk:mm [ET on] D MMM YYYY');
+      
       quake.properties.mapurl = "https://maps.googleapis.com/maps/api/staticmap?center=" + quake.geometry.coordinates[1] + "," + quake.geometry.coordinates[0] +  "&zoom=5&size=600x500&maptype=roadmap&markers=color:red%7C" + quake.geometry.coordinates[1] + "," + quake.geometry.coordinates[0];
       
       console.log("map: ", quake.properties.mapurl);
@@ -45,47 +48,72 @@ request(url, function (error, response, body) {
           else
             console.log("The file was saved!");
             
-            //
-            // post a tweet with media
-            //
-            var b64content = fs.readFileSync('latest_quake.png', { encoding: 'base64' });
-
-            // first we must post the media to Twitter
-            bot.post('media/upload', { media_data: b64content }, function (err, data, response) {
-              // now we can assign alt text to the media, for use by screen readers and
-              // other text-based presentations and interpreters
-              var mediaIdStr = data.media_id_string;
-              
-              var altText = "QUAKE! Magnitude " + quake.properties.mag + ", " + quake.properties.place + " on " + quaketime +".";
-              
-              var meta_params = { media_id: mediaIdStr, alt_text: { text: altText } };
-
-              bot.post('media/metadata/create', meta_params, function (err, data, response) {
-                if (!err) {
-                  // now we can reference the media and post a tweet (media will attach to the tweet)
-                  var params = { status: altText, media_ids: [mediaIdStr] };
-
-                  bot.post('statuses/update', params, function (err, data, response) {
-                    console.log("Tweeted!");
+            /// Print text on image
+            Jimp.read("latest_quake.png").then(function (image) {
+                
+                // do stuff with the image
+                
+                // load in the font
+                Jimp.loadFont(Jimp.FONT_SANS_32_BLACK).then(function (font) {
+                    image.print(font, 10, 10, quake.properties.mag + " quake at "+ quaketime_image);
+                    console.log("got here");
                     
-                  var savethis = { "time" : quake.properties.time };
-                  
-                  fs.writeFile("./last_quake.json", JSON.stringify(savethis), function(err){
-                      if (!err) {
-                          console.log("quake time updated");
-                      }
-                  });
+                    image.write("latest_quake_with_text.png", function(){
+                        
+                        console.log("file with text written");
+                        
+                        //
+                        // post a tweet with media
+                        //
+                        var b64content = fs.readFileSync('latest_quake_with_text.png', { encoding: 'base64' });
+
+                        // first we must post the media to Twitter
+                        bot.post('media/upload', { media_data: b64content }, function (err, data, response) {
+                          // now we can assign alt text to the media, for use by screen readers and
+                          // other text-based presentations and interpreters
+                          var mediaIdStr = data.media_id_string;
+                          
+                          var altText = "QUAKE! Magnitude " + quake.properties.mag + ", " + quake.properties.place + " on " + quaketime +".";
+                          
+                          var meta_params = { media_id: mediaIdStr, alt_text: { text: altText } };
+
+                          bot.post('media/metadata/create', meta_params, function (err, data, response) {
+                            if (!err) {
+                              // now we can reference the media and post a tweet (media will attach to the tweet)
+                              var params = { status: altText, media_ids: [mediaIdStr] };
+                        
+                              bot.post('statuses/update', params, function (err, data, response) {
+                                console.log("Tweeted!");
+                                
+                              var savethis = { "time" : quake.properties.time };
+                              
+                              fs.writeFile("./last_quake.json", JSON.stringify(savethis), function(err){
+                                  if (!err) {
+                                      console.log("quake time updated");
+                                  }
+                              });
+                                
+                            });
+                            }
+                        
+                        });
+                        
+                        
+                        });    
+                        
+                        
+                    });
+                    
+                    
                     
                 });
-                }
+                            
+            
+
             });
-        });
-                    
-            
-            
-            
+    
         }); 
-      });      
+    });      
       
   } else {
       
