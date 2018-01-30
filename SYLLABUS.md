@@ -54,6 +54,19 @@ Each one should be like a blog post. Put some effort into it! Use this to lay th
 
 Feedback on each assignment will be provided every week via Slack.
 
+## Presentations
+
+The last week of class will include presentations and a discussion about your prototyping path. Your greatest success will be secured if you _document the process_ _show your work_ and _explain your thinking_. This is not about having a finished product, it's about having a working prototype and an explanation of how you got there.
+
+Specifically, you'll want to show:
+
+* Your intended audience and initial goal
+* Your key prototyping stages
+* The key feedback you got
+* What worked, what didn't work, and changes you made
+* A demo of your prototype
+* Your next steps
+
 ## Grading
 
 There are 100 points possible in this class.
