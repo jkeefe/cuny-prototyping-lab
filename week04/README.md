@@ -49,8 +49,7 @@ Us for action:
         - https://www.propublica.org/datastore/api/propublica-congress-api
     
     - Twilio API
-        - John Demo's how easy it is with place_call.js
-        
+        - John Demo's how easy it is with place_call.js    
     
     - Examine the Twitter API
         - Authentication OAuth

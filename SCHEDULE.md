@@ -62,35 +62,31 @@ Everyone will present on their project progress, and we'll critique each other a
 
 ## Spring Break • No class • Wednesday, April 4, 2018 
 
-## Week10 • Wednesday, April 11, 2018
+## Biz-Dev Workshops • No class • Wednesday, April 11, 2018
+
+## Week 10 • Wednesday, April 18, 2018
 
 **Everyone Workshops**
 
-As a class, we'll workshop, code, build and explore two classmates' projects.
+As a class, we'll workshop, code, build and explore classmates' projects.
 
-## Week 11 • Wednesday, April 18, 2018
-
-**Everyone Workshops**
-
-As a class, we'll workshop, code, build and explore two classmates' projects.
-
-## Week 12 • Wednesday, April 25, 2018
+## Week 11 • Wednesday, April 25, 2018
 
 **Everyone Workshops**
 
-As a class, we'll workshop, code, build and explore two classmates' projects.
+As a class, we'll workshop, code, build and explore classmates' projects.
 
-## Week 13 • Wednesday, May 2, 2018
+## Week 12 • Wednesday, May 2, 2018
 
-**Everyone Workshops Project 9 + Open Lab/Help**
+**Everyone Workshops + Open Lab/Help**
 
-As a class, we'll workshop, code, build and explore one person's project. Then we'll provide each other help with the last steps of their projects.
-
-## Week 14 • Wednesday, May 9, 201
+## Week 13 • Wednesday, May 9, 201
 
 **Presentation Run-throughs + Open Lab/Help**
 
-## Week 15 • Wednesday, May 16 2018
+Additional one-on-one help will be available this week.
+
+## Week 14 • Wednesday, May 16 2018
 
 **Final Presentations and Demonstrations**
 
