@@ -10,7 +10,10 @@ We'll get to know each other, talk about what we're bringing to the class and pl
 
 * Textfun demo
     * Start Server
+        - `ssh ubuntu@54.164.195.52`
+        - `node server.js`
     * Call the number
+        - `(646) 699-3322`
     * How it works
     * Anatomy of a text message
     * Twilio
