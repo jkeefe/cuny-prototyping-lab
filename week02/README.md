@@ -1,4 +1,4 @@
-# Week 2 • Monday, February 6, 2017
+# Week 2
 
 **Bots & Intellegent Agents**
 

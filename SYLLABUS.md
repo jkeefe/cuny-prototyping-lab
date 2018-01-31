@@ -2,9 +2,13 @@
 
 Welcome to the prototyping lab! 
 
+# Schedule
+
+The schedule for the current class is [here](SCHEDULE.md).
+
 ## Class Description
 
-How to get journalism to audiences has been a challenge for decades. And with the unconventional campaign and subsequent election of Donald Trump for president, that's become an even bigger question for news organizations. Come explore what's next in news delivery and prototype your ideas. Throughout the industry, we see that the ability to build journalistic products is key, not just in startups from Vox to Quartz but also in big media companies of all sorts, from The New York Times to CNN to WNYC to a metro newspaper. This class will help you imagine and prototype new products and services -- and in the process reimagine journalism itself and how it connects with and serves the public. 
+How to get journalism to audiences has been a challenge for decades. And with the unconventional presidency of Donald Trump, that's become an even bigger question for news organizations. Come explore what's next in news delivery and prototype your ideas. Throughout the industry, we see that the ability to build journalistic products is key, not just in startups from Vox to Quartz but also in big media companies of all sorts, from The New York Times to CNN to WNYC to a metro newspaper. This class will help you imagine and prototype new products and services -- and in the process reimagine journalism itself and how it connects with and serves the public. 
 
 We'll develop and test your ideas using methods from paper prototyping and the latest technologies. We'll quickly see what works and what doesn't. We'll experiment with telling news stories through channels such as instant messaging, watches, intelligent agents like Siri and Alexa and even household objects. You will learn essential skills to develop, grow, test and retry how you tell stories -- and may even start a viable product. 
 
@@ -13,10 +17,6 @@ This laboratory is great for anyone who wants to have an edge in the changing me
 ## Spirit
 
 We're going to learn how to play, experiment, learn and tinker -- all with the goal of making new ways to experience and consume information. This is a hands-on class, and participation is key. Let's have some fun and make great things.
-
-## Schedule
-
-The schedule for this class is [here](SCHEDULE.md). Please note there is no class President's Day week (even though your other Monday classes will meet on Wednesday that week) and that one week we meet on Thursday (April 20) instead of Monday.
 
 ## Logistics
 
@@ -36,7 +36,7 @@ Our Slack is [cunylab.slack.com](https://cunylab.slack.com)
 
 ### Github for Code
 
-I'll post code, examples and and class documents on Github. If you have a Github account, great. If not, don't worry. You don't need it right away, as the GitHub info is public.
+I'll post code, examples and and class documents on Github. If you have a Github account, great. If not, don't worry. You don't need it right away (and maybe not at all), as the GitHub info is public.
 
 Our Github is [github.com/jkeefe/cuny-prototyping-lab](https://github.com/jkeefe/cuny-prototyping-lab)
 
@@ -56,7 +56,7 @@ Feedback on each assignment will be provided every week via Slack.
 
 ## Presentations
 
-The last week of class will include presentations and a discussion about your prototyping path. Your greatest success will be secured if you _document the process_ _show your work_ and _explain your thinking_. This is not about having a finished product, it's about having a working prototype and an explanation of how you got there.
+The last week of class will include presentations and a discussion about your prototyping path. Your greatest success will be secured if you _document the process_, _show your work_ and _explain your thinking_. This is not about having a finished product, it's about having a working prototype and an explanation of how you got there.
 
 Specifically, you'll want to show:
 

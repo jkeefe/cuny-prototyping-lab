@@ -1,4 +1,4 @@
-## Week 1 • Monday, January 30, 2017	
+## Week 1
 
 **SMS Texting / Introduction / Prototyping**
 
