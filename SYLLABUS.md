@@ -2,7 +2,7 @@
 
 Welcome to the prototyping lab! 
 
-# Schedule
+## Schedule
 
 The schedule for the current class is [here](SCHEDULE.md).
 
