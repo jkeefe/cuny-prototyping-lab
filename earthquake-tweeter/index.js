@@ -17,7 +17,7 @@ var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geo
 
 request(url, function (error, response, body) {
   
-  data = JSON.parse(body);
+  var data = JSON.parse(body);
   
   console.log(data.features[0].properties.mag);
   
