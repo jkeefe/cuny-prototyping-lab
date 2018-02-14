@@ -8,8 +8,8 @@ var accessToken = "PUT_YOUR_ACCESS_TOKEN_HERE";
 var accessTokenSecret ="PUT_YOUR_ACCESS_TOKEN_SECRET_HERE";
 		
 twitter.statuses("update", {
-        status: "Tweet test."
-    },
+    status: "Tweet test."
+},
     accessToken,
     accessTokenSecret,
     function(error, data, response) {
