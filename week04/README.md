@@ -4,27 +4,26 @@
 
 I like to call API's "Another Person's Information" -- services out there you can use to build a unique offering of your own. SDKs are "Software Development Kits" that let you tinker with real-world objects like the iPhone and Amazon Echo. We'll get our hands into some code today.
 
-_Assignent due next week:_
-* Find 10 APIs that might be useful to your project. Give me the title, the URL and how you might use it. 
-* Install Eagle on your computer from   http://www.autodesk.com/products/eagle/overview
-
 ## Plan
 
 ### API overview
 
 Use for reference:
-    - Google Geocoder
     - ProPublica Congressional API
     
 Real time info:
     - darksky.net
-    - Earthquakes
-    - MTA bus info
+    - MTA subway info
+        - http://datamine.mta.info/list-of-feeds
+        - http://datamine.mta.info/user/register
+        - https://github.com/aamaliaa/mta-gtfs
     
 Us for action:
-    - Twilio (phone calls & text messages)
-    - Particle.io (make physical things happen)
+    - Slack <=
     - Twitter (read/send tweets)
+
+Spotify
+Eventbrite
 
 
 ### A Word about text editors
@@ -48,8 +47,8 @@ Us for action:
     - Propublica's congressional api
         - https://www.propublica.org/datastore/api/propublica-congress-api
     
-    - Twilio API
-        - John Demo's how easy it is with place_call.js    
+    <!-- - Twilio API
+        - John Demo's how easy it is with place_call.js     -->
     
     - Examine the Twitter API
         - Authentication OAuth
