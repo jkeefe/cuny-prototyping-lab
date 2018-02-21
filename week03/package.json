@@ -1,12 +1,10 @@
 {
-  "name": "week04",
+  "name": "week03",
   "version": "1.0.0",
-  "description": "**APIs & SDKs**",
+  "description": "",
   "main": "getweather.js",
   "dependencies": {
-    "mta-gtfs": "^1.1.0",
-    "node-twitter-api": "^1.8.0",
-    "request": "^2.79.0"
+    "node-twitter-api": "^1.8.0"
   },
   "devDependencies": {},
   "scripts": {

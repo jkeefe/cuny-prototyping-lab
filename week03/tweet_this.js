@@ -1,14 +1,13 @@
-var request = require('request');
 var twitterAPI = require('node-twitter-api');
 var twitter = new twitterAPI({
-    consumerKey: 'PUT_YOUR_CONSUMER_KEY_HERE',
-    consumerSecret: 'PUT_YOUR_CONSUMER_SECRET_HERE'
+    consumerKey: 's5LIn7UwdFHWmXbakgI9bChmW',
+    consumerSecret: 'FmObL5YO4BVSUZHmnRgpHdEyxePGTZ3RcTi3n1L3qxX7tVQAJK'
 });
-var accessToken = "PUT_YOUR_ACCESS_TOKEN_HERE";
-var accessTokenSecret ="PUT_YOUR_ACCESS_TOKEN_SECRET_HERE";
+var accessToken = "66575819-K1sOxIiezTvJMtiqQgvbpZ4svseHDAqOSlKm4XWKg";
+var accessTokenSecret ="kquzJOZEc9eRtb2Zw5miTPNbWg6bP5QUxI4NQtr36CHQI";
 		
 twitter.statuses("update", {
-    status: "Tweet test."
+    status: "Hello world from the CUNY 2018 Prototyping class."
 },
     accessToken,
     accessTokenSecret,
