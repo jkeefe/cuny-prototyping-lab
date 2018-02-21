@@ -1,119 +1,174 @@
-## Week 4 • Monday, February 27, 2017
+## Week 4 
 
-**APIs & SDKs**
+**The Amazon Cloud**
 
-I like to call API's "Another Person's Information" -- services out there you can use to build a unique offering of your own. SDKs are "Software Development Kits" that let you tinker with real-world objects like the iPhone and Amazon Echo. We'll get our hands into some code today.
+## Sign up
+- Probably CC
+- Free tier 
 
-## Plan
+## Whole Collection Of Stuff
+- 100 services?
+- Data centers all over the world 
+- Documented 
+- But for engineers
 
-### API overview
+## S3
+- solid storage 
+- Like making directories on Amazon's servers
+- Code can't run there - mainly for images, html, js that runs in browser
+- Open to the internet (if you make it)
+- buckets (the directory)
+- Drag and drop 👈🏻
+- Make public
+- Lives "across" regions
 
-Use for reference:
-    - ProPublica Congressional API
-    
-Real time info:
-    - darksky.net
-    - MTA subway info
-        - http://datamine.mta.info/list-of-feeds
-        - http://datamine.mta.info/user/register
-        - https://github.com/aamaliaa/mta-gtfs
-    
-Us for action:
-    - Slack <=
-    - Twitter (read/send tweets)
+## EC2
+- a full computer in the cloud 
+- A huge innovation 
+- All sizes and shapes
+- Linux, micro, ml huge
+- Runs 24/7
+- Lives in ONE region
+- Connect via terminal 
+- Companies rely on them, basically much of the internet (which we know because of a few crashes)
+- Instructions available (see below!)
+- Good if you are running software 24/7
+- Has an address, can make it public
+- How I used to run code: function sits and waits to run
 
-Spotify
-Eventbrite
+## Lambda
+- latest move
+- "Serverless"
+- Code lives in the cloud 
+- "Wakes up" runs and goes to sleep
+- Awake for no more than 5 mins
+- Only pay for the memory used for the time used. 
+- No changeable storage!
+- Works for 95% of what you'll need (est!)
+- Great to make APIs
+- Not naturally connected to the public internet
 
+## API gateway
+- Routes incoming web/api requests to the proper place (usually Lambda)
+- Generates a url for that place
 
-### A Word about text editors
+## Cloudwatch
+- Where the logs are!
+- Also where we make automatic things happen
 
-    - Textwrangler
-    - Atom
-    - TextEdit (in plain-text mode)
+-- BREAK --
 
-### Dig into some APIs
-
-    - Dark Sky API
-        - http://darksky.net/dev
-        - sign up for an account
-        - see your key
-        - try your key
-        - looks like a mess!
-            - extensions
-            - Jsonview
-        - toy with the lat/lon
-    
-    - Propublica's congressional api
-        - https://www.propublica.org/datastore/api/propublica-congress-api
-    
-    <!-- - Twilio API
-        - John Demo's how easy it is with place_call.js     -->
-    
-    - Examine the Twitter API
-        - Authentication OAuth
-        - The wonder of libraries
-        - Look at node-twitter-api
-        - Install npm
-        - install node-twitter-api:
-            - `npm install node-twitter-api --save`
+## Permissions
+- Hardest to handle 
+- Can get help if stuck
+- AWS Genius Bar
 
 
-### Let's Tweet
+- Permission for YOUR computer
+    - IAM
+        - Users (people) 
+        - Policies
+    - User
+    - User Name: superduper
+    - Check programatic Access
+    - “Attach existing policies directly”
+    - Look at Administrator Access
+    - Check that
+    - Review
+- Set up .aws/credentials *
+- Set up .aws/config *
+- Use pico
 
-    - Log in to twitter
-    - Go to http://twitter.com/apps
-        
-        Create an app, filling out the required boxes. I'm giving this short shrift here, but take some time to look through it. A couple of tips, tho:
+- permissions between services:
+- Roles
+(like a user, usually some code or an AWS service)
+- Policies 
 
-        	- You can ignore the callback part
-        	- Access level should be both READ and WRITE
-        	- You need to click on the link, "manage keys and access tokens"
-        	- You're going to need the following long strings of characters
-        		* Consumer Key
-        		* Consumer Secret
-        		* Access Token
-        		* Access Token Secret
-        	- The last two you may have to generate with a click of a button
-        
-    - Open terminal
-    - type `cd ~`
-    - type `cd Documents`
-    - type `mkdir prototyping`
-    - type `cd prototyping`
-    
-    - Open your text editor and navigate to this `prototyping` directory
-    
-    - Open [tweet_this.js](https://github.com/jkeefe/cuny-prototyping-lab/blob/master/week04/tweet_this.js) on Github
-    - Look at the "raw" version (click the "Raw") button
-    - Copy-paste this into your text editor
-    - Replace all the keys with your actual info
-    - Replace the "test text"
-    - Save
-    - We need to install a couple of helper apps, including node-twitter-api:
-    
-    `npm init --yes`
-    `npm install request node-twitter-api --save`
-    
-    - Then run your program! (Just do it once, tho!)
-    
-    `node tweet_this.js`
+## Make an API in Lambda
 
-    - Check your twitter account!
-    
-Now let's make it a bit more sophisticated!
+./node_modules/.bin/claudia create --region us-east-1 --api-module lambda
 
-    - Go to https://github.com/jkeefe/cuny-prototyping-lab/blob/master/week04/getweather.js
-    - Click "raw"
-    - Copy-paste that into your editor
-    - Change the keys to your own again, including darksky
-    - save as getweather.js
-    
-    
+- Make a new folder
+- Open it in your text editor
+- make a file called `index.js`
+- put this into it:
+
+```javascript
+module.exports = function(request) {
+  
+  return new Promise(function(resolve, reject){
+
+      resolve("OK");
+
+  });
+  
+};
+```
+
+- make another file called `lambda.js`
+- put this into it:
+
+```javascript
+var questionbot = require('./index');
+var ApiBuilder = require('claudia-api-builder');
+var api = new ApiBuilder();
+
+module.exports = api;
+
+api.get('/question-bot', function(request){
+  // bulding the reply (repsonse)
+  // which first sends the request object to sparkbot for processing
+  return questionbot(request)
+  
+    // wait for the Promise object to come back from sparkbot
+    .then(function(response){
+      // send the response back to the requester (Twilio)
+      return new api.ApiResponse(response, {'Content-Type': 'text/plain'}, 200);
+    });
+});
+```
+
+- Open your folder in the terminal: 
+
+```
+npm init
+npm install claudia --save-dev
+npm install claudia-api-builder --save
+npm install twilio mongodb --save
+```
+
+### Starting Claudia:
+
+`./node_modules/.bin/claudia create --region us-east-1 --api-module lambda`
+
+### Updating Claudia
+
+`./node_modules/.bin/claudia update`
+
+
+## Other John Notes:
+
+- csv of data
+- Json of Data?
+- Send the request
+- Get the response
+- Wire that to Dexter 
+- Wire that to Twilio
+- Show party bot?
+- Not all require api-gateway
+
+- Lambda environment variables
+- Setting
+- Accessing (process.env.NAME)
+
+- For Twilio, need XML
+
+
 
 ----
-    
-# Your own computer in the cloud
+
+
+# Your computer in the cloud: Amazon EC2
 
     - Build a computer in the cloud
     - Tweet from there
@@ -127,7 +182,7 @@ So that poses a problem when you have API keys!
 
 **EC2** is a live computer where you can run programs -- including programs that use your API keys. 
 
-##Fire Up Your Cloud Computer
+## Fire Up Your Cloud Computer
 
 - go to [http://aws.amazon.com](http://aws.amazon.com)
 - Sign up with your Amazon account. You will be asked for your credit card, and spending money is possible here. But today's steps involve spinning up a "micro" server which will run a year for free. You'll want to shut it down to avoid being charged in a year!
