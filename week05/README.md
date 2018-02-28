@@ -1,100 +1,82 @@
+# First Half - Cloud Computing Continued
 
+## Make an API in Lambda
 
+- Make a new folder
+- Open it in your text editor
+- make a file called `index.js`
+- put this into it:
 
-## John brings to class
+```javascript
+module.exports = function(request) {
+  
+  return new Promise(function(resolve, reject){
 
-- Blinky sets
-- Liza fireflies
-    - Extra batteries for 
-- Mice
+      resolve("OK");
 
-## Basics
+  });
+  
+};
+```
 
-- The blinky
-- Liza fireflies
-- Show design?
+- make another file called `lambda.js`
+- put this into it:
 
-## Getting Started
+```javascript
+var questionbot = require('./index');
+var ApiBuilder = require('claudia-api-builder');
+var api = new ApiBuilder();
 
-- [Download](http://www.autodesk.com/products/eagle/free-download) and install Eagle 
-- Download the sparkfun parts library: 
-    - Go to the [Github page](https://github.com/sparkfun/SparkFun-Eagle-Libraries)
-    - Click "Clone or Download"
-    - Click "download zip"
-    - Save to Downloads folder
-    - Extract that .zip file
-    - We'll use this in a bit
-- Download [this](http://docs.oshpark.com/resources/oshpark-2layer.dru) DRU file.
-- Download [this](http://docs.oshpark.com/resources/OSHPark-2layer-Eagle7.2.cam) CAM file.
+module.exports = api;
 
-## Schematic
-
-My instructions are based on the great instructions from Sparkfun:
-
-Eagle Schematic Design: https://learn.sparkfun.com/tutorials/using-eagle-schematic#wiring-up-the-schematic
-Eagle Board Design: 
-
-- Run Eagle
-- Create free account
-- Will add an "eagle" directory in your home directory
-- File -> New Project
-- Right-click the project -> New -> Schematic
-
-
-
-### Getting the parts
-
-
-- Download the sparkfun parts library: https://github.com/sparkfun/SparkFun-Eagle-Libraries
-    - Click "Clone or Download"
-    - Click "download zip"
-    - Save to Downloads folder
-    - Open that .zip file
+api.get('/question-bot', function(request){
+  // bulding the reply (repsonse)
+  return questionbot(request)
+  
+    // wait for the Promise object to come back from questionbot
+    .then(function(response){
+        
+      // send the response back to the requester
+      return new api.ApiResponse(response, {'Content-Type': 'text/plain'}, 200);
     
-- Add the library
-    - Click "Use library" button
-    - Navigate to "Sparkfun - batteries"
-    - Select
-    - Also navigate to "Sparkfun - switches"
+    });
+});
+```
 
-- Click the "Add Part" button (little plug with a + sign)
-    - Search for \*10mm\*
-    - Pick the sparkfun one
-    - Add it to the white space
-    
-    - Click "add part"
-    - Search for \*holder\* (for battery holder)
-    - Pick the 20mm one
-    - Add it to the white space
-    
-    - Click "add part"
-    - Search for \*dpdt\* (Stands for Double Pole Double Throw)
-    - Add it to the white space
+- Open your folder in the terminal: 
 
-### Wiring up the parts
+```
+npm init --yes
+npm install claudia --save-dev
+npm install claudia-api-builder --save
+```
 
-Use the `NET` tool NOT the `WIRE` tool. More details here: https://learn.sparkfun.com/tutorials/using-eagle-schematic#wiring-up-the-schematic
+### Starting Claudia:
 
-## Drawing the board
+`./node_modules/.bin/claudia create --region us-east-1 --api-module lambda`
 
-- Follow the Sparkfun guide [here](https://learn.sparkfun.com/tutorials/using-eagle-board-layout)
-- Always open board and schematic together!
-- Don't close one!
+### Updating Claudia
 
-Notes:
-- Lay out the parts
-- Make the boundary 1.4" each side (or total of max 2-in square)
-- put your name on it
+`./node_modules/.bin/claudia update`
 
 
-## Design Rules
+## Other John Notes:
 
-Page: http://docs.oshpark.com/design-tools/eagle/design-rules-files/
+- var mathnumber = request.queryString.math;
 
-File: http://docs.oshpark.com/resources/oshpark-2layer.dru
+- Find the logs
+- csv of data
+- Json of Data?
+- Send the request
+- Get the response
+- Wire that to Dexter 
+- Wire that to Twilio
+- Show party bot?
+- Not all require api-gateway
 
-## Cam job:
+- Lambda environment variables
+- Setting
+- Accessing (process.env.NAME)
 
-File: http://docs.oshpark.com/resources/OSHPark-2layer-Eagle7.2.cam
-
+- For Twilio, need XML
 

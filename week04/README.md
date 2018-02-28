@@ -86,8 +86,6 @@
 
 ## Make an API in Lambda
 
-./node_modules/.bin/claudia create --region us-east-1 --api-module lambda
-
 - Make a new folder
 - Open it in your text editor
 - make a file called `index.js`
@@ -117,13 +115,14 @@ module.exports = api;
 
 api.get('/question-bot', function(request){
   // bulding the reply (repsonse)
-  // which first sends the request object to sparkbot for processing
   return questionbot(request)
   
-    // wait for the Promise object to come back from sparkbot
+    // wait for the Promise object to come back from questionbot
     .then(function(response){
-      // send the response back to the requester (Twilio)
+        
+      // send the response back to the requester
       return new api.ApiResponse(response, {'Content-Type': 'text/plain'}, 200);
+    
     });
 });
 ```
@@ -131,10 +130,9 @@ api.get('/question-bot', function(request){
 - Open your folder in the terminal: 
 
 ```
-npm init
+npm init --yes
 npm install claudia --save-dev
 npm install claudia-api-builder --save
-npm install twilio mongodb --save
 ```
 
 ### Starting Claudia:

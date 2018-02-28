@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "my-simple-api-executor",
+    "name": "my-simple-api",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "k55cgpvst3",
+    "module": "lambda"
+  }
+}

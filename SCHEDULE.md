@@ -28,11 +28,13 @@ Wednesday, February 21, 2018
 
 What if there's not an API out there that does _exactly_ what you want? You can make your own. This also happens to be how you can do calculations while you're computer -- and you -- are asleep. We'll get up and running with building things in the Amazon Web Services (AWS) "cloud."
 
-## Week 5 • Cloud Computing Continued
+## Week 5 • Cloud Computing Continued + Data and Personal Security + 
 
 Wednesday, February 28, 2018
 
-There's a lot more we can do super cheaply with Amazon's services that are super cheap and fun to play with. We'll do more.
+We'll have **you** try making a Lambda function in the cloud.
+
+Then we'll have a discussion about locking down your devices and your projects to protect yourself and your sources.
 
 ## Week 6 • Sensors & Physical Prototypes
 
@@ -40,11 +42,11 @@ Wednesday, March 7, 2018
 
 Not everything you can prototype is on a screen. We can make real-life, physical objects, too. And playing with these things can help you learn to code, break away fears of technology and have fun.
 
-## Week 7 • Data and Personal Security + Project Discussions 
+## Week 7 • Project Discussions 
 
 Wednesday, March 14, 2018
 
-We'll have a discussion about locking down your devices and your projects to protect yourself and your sources.
+In-depth discussions about your projects.
 
 ## Week 8 • Paper Prototyping / Brainstorming
 
