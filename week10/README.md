@@ -1,8 +1,8 @@
 ## Week 10 - Everybody Workshops
 
 - Crafting Intents & Responses in Dialogflow 
-    - Pulling them into Dexter
     - For Cooking project
+    - (Alexa next week)
 - Pulling API data into Dexter
     - Cryptocurrency prototype
     - Apply to Spotify search
@@ -53,6 +53,8 @@ function callNumbers() {
 
 }
 ```
+
+- Many more great examples here: https://www.benlcollins.com/spreadsheets/starting-gas/
 
 ## Simple Scraping with Node
 
