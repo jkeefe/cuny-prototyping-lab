@@ -25,7 +25,7 @@ Here's the base code you need. Put your Dialogflow agent's `Client access token`
 
 ```
 + *
-$ GET https://api.api.ai/v1/query?v=20150910&query=<call>encode_uri <star></call>&lang=en&sessionId=<get _platformId> {"headers":{"Content-Type":"application/json", "Authorization": "Bearer xxxxxxxxx"}}
+$ GET https://api.api.ai/v1/query?v=20150910&query=<call>encode_uri <star></call>&lang=en&sessionId=112233 {"headers":{"Content-Type":"application/json", "Authorization": "Bearer xxxxxxxxx"}}
 * ${{result.fulfillment.speech}} != "" => ${{result.fulfillment.speech}} 
 - Sorry, I didn't get that.
 - Hmmm. You may have to rephrase that.
@@ -54,27 +54,30 @@ $ GET https://api.coinbase.com/v2/prices/spot?currency=USD
 - Which is also here: https://github.com/benlcollins/apps_script_apis/blob/master/for_website/001_numbers.gs
 - We'll add in `JSON.parse(data)`
 
+
 ```
 function onOpen() {
     var ui = SpreadsheetApp.getUi();
-    ui.createMenu('Open Weather API Menu')
-      .addItem('Update Weather','callWeather')
+    ui.createMenu('API')
+      .addItem('Update Bitcoin','callCoinbase')
       .addToUi();
 }
 
-function callWeather() {
+function callCoinbase() {
 
-    // Call the Numbers API for random math fact
-    var response = UrlFetchApp.fetch("http://api.openweathermap.org/data/2.5/weather?lat=41&lon=-74&units=imperial&appid=YOUR_API_KEY_HERE");
+    // Call coinbase for the latest data
+    var response = UrlFetchApp.fetch("https://api.coinbase.com/v2/prices/spot?currency=USD");
     Logger.log(response.getContentText());
 
-    var data = response.getContentText();
+    var coinbase = JSON.parse(response.getContentText());
     var sheet = SpreadsheetApp.getActiveSheet();
-    // sheet.getRange(1,1).setValue([fact]);
-    sheet.getRange(sheet.getLastRow() + 1,1).setValue([fact]);
+    // sheet.getRange(1,1).setValue([coinbase.data.amount]);
+    // sheet.getRange(1,2).setValue([coinbase.data.currency]);
+    sheet.getRange(sheet.getLastRow() + 1,1).setValue([coinbase.data.amount]);
 
 }
 ```
+
 
 ### Extra info
 

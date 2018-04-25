@@ -25,36 +25,6 @@
 - Blocker: Not currently accepting API registrations
 
 
-## Pulling API data into Google Spreadsheets
-
-- Going to use openweathermap.org
-- Great info here: https://www.benlcollins.com/apps-script/beginner-apis/
-- Which is also here: https://github.com/benlcollins/apps_script_apis/blob/master/for_website/001_numbers.gs
-- We'll add in `JSON.parse(data)`
-
-```
-function onOpen() {
-    var ui = SpreadsheetApp.getUi();
-    ui.createMenu('Custom Numbers API Menu')
-      .addItem('Display random number fact','callNumbers')
-      .addToUi();
-}
-
-function callNumbers() {
-
-    // Call the Numbers API for random math fact
-    var response = UrlFetchApp.fetch("http://numbersapi.com/random/math");
-    Logger.log(response.getContentText());
-
-    var fact = response.getContentText();
-    var sheet = SpreadsheetApp.getActiveSheet();
-    // sheet.getRange(1,1).setValue([fact]);
-    sheet.getRange(sheet.getLastRow() + 1,1).setValue([fact]);
-
-}
-```
-
-- Many more great examples here: https://www.benlcollins.com/spreadsheets/starting-gas/
 
 ## Simple Scraping with Node
 
