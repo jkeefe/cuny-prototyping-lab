@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "history-alexa-executor",
+    "name": "history-alexa",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "91r7tnxs64",
+    "module": "lambda"
+  }
+}
