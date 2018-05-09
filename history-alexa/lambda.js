@@ -17,6 +17,6 @@ api.get('/history', function(request){
     
   }, {
     // this optional 3rd argument changes the format of the response, for twilio 
-    success: { contentType: 'application/xml' },
-    error: { contentType: 'application/xml' }
+    success: { contentType: 'application/json' },
+    error: { contentType: 'application/json' }
 });
