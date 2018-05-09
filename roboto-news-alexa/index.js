@@ -2,8 +2,6 @@ const Alexa = require('alexa-sdk');
 const Tabletop = require('tabletop');
 const fuzz = require('fuzzball');
 
-// TODO replace with your app ID (OPTIONAL).
-var APP_ID = undefined; 
 
 // The Google spreadsheet must be "Published" -- which is NOT the same as
 // sharing it publicly! (For reals.) Go to the spreadsheet then:
@@ -34,7 +32,12 @@ exports.handler = function(event, context, callback){
     .then((sheet_data) => {
         searchSheet(query, sheet_data, columns_to_search)
         .then((answer) => {
-            callback(null, {} );
+            
+            var reply = {};
+            reply.file = answer[0][0]["File"];
+            reply.date = answer[0][0]["Date"];
+            
+            callback(null, reply);
         });
     })
     .catch((promise_err) => {

@@ -1,4 +1,4 @@
-var app = require('./bot.js');
+var app = require('./index.js');
 
 var send_to_app = {
     term: "alexa"

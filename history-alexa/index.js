@@ -1,11 +1,13 @@
 var request_node = require('request');
 var cheerio = require('cheerio');
-
-var url = "https://hosted.ap.org/article/045a0a7365e2403d9507ee97762cbb01/today-history";
+var moment = require('moment');
 
 module.exports = function(request) {
   
     return new Promise(function(resolve, reject){
+
+        var date = moment().utcOffset(-4).format("YYYY[/]MM[/]DD");
+        var url = "https://www.nytimes.com/aponline/" + date + "/us/ap-history.html";
 
         // functional code goes in here
         request_node(url, function(error, response, body){
@@ -13,38 +15,39 @@ module.exports = function(request) {
             var $ = cheerio.load(body);
             
             var set = [];
+            var setup = "";
+            var highlight = "";
+            var grab_next_paragraph = false;
             
             // grab all of the paragrahs (<p>..</p>) by the 'p' selector
             $('p').each(function(i, elem){
         
                 var current_paragraph = $(this).text();
                 
-                if (current_paragraph.match(/^.+ ago:/)) {
+                if (current_paragraph.match(/^Today is/)) {
+                    setup = current_paragraph;
                     return;
                 }
                 
-                if (current_paragraph.match(/^Today's birth/i)) {
+                if (current_paragraph.match(/^Today's Highlight/)) {
+                    grab_next_paragraph = true;
                     return;
                 }
                 
-                if (current_paragraph.match(/^Thought/i)) {
+                if (grab_next_paragraph == true) {
+                    highlight = current_paragraph;
+                    grab_next_paragraph = false;
                     return;
                 }
                 
-                if (current_paragraph.match(/^©/i)) {
+                if (current_paragraph.match(/^In \d\d\d\d/)) {
+                    set.push($(this).text());
                     return;
                 }
-                
-                console.log("paragraph " + i + " = " + current_paragraph);
-                console.log("----");
-                
-                set.push($(this).text());
             
             });
         
-            var setup = set[1];
-            var highlight = set[3];
-            var extra = set[randomIntFromInterval(5,set.length)];
+            var extra = set[randomIntFromInterval(0,set.length)];
                 
             var answer = {};
             answer.setup = setup;
