@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "roboto-news-alexa-executor",
+    "name": "roboto-news-alexa",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "657juw5spb",
+    "module": "lambda"
+  }
+}

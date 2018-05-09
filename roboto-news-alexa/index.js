@@ -2,7 +2,6 @@ const Alexa = require('alexa-sdk');
 const Tabletop = require('tabletop');
 const fuzz = require('fuzzball');
 
-
 // The Google spreadsheet must be "Published" -- which is NOT the same as
 // sharing it publicly! (For reals.) Go to the spreadsheet then:
 //    File > Publish to the Web ...
@@ -19,33 +18,40 @@ var columns_to_search = ['Tags'];
 var num_rows_to_send_back = 1;
 
 
-exports.handler = function(event, context, callback){ 
+module.exports = function(request) {
+  
+  return new Promise(function(resolve, reject){
 
-    // funtional code goes here ... with the 'event' and 'context' coming from
-    // whatever calls the lambda function (like CloudWatch or Alexa function).
-    // callback function goes back to the caller.
-    
-    // our quack bot sends the info in command.predicate
-    var query = event.term;
+      // funtional code goes here ... with the 'event' and 'context' coming from
+      // whatever calls the lambda function (like CloudWatch or Alexa function).
+      // callback function goes back to the caller.
+      
+      
+      
+      // our quack bot sends the info in command.predicate
+      var query = request.body.term;
 
-    getSpreadsheetData(spreadsheet_published_url, sheet_name)
-    .then((sheet_data) => {
-        searchSheet(query, sheet_data, columns_to_search)
-        .then((answer) => {
-            
-            var reply = {};
-            reply.file = answer[0][0]["File"];
-            reply.date = answer[0][0]["Date"];
-            
-            callback(null, reply);
-        });
-    })
-    .catch((promise_err) => {
-        callback(promise_err);
-    });
-    
+      getSpreadsheetData(spreadsheet_published_url, sheet_name)
+      .then((sheet_data) => {
+          searchSheet(query, sheet_data, columns_to_search)
+          .then((answer) => {
+              
+              var reply = {};
+              reply.file = answer[0][0]["File"];
+              reply.date = answer[0][0]["Date"];
+              
+              resolve(reply);
+          });
+      })
+      .catch((promise_err) => {
+          reject(promise_err);
+      });
+      
 
+  });
+  
 };
+
 
 function getSpreadsheetData(document_URL, sheet_name) {
     return new Promise((resolve, reject) => {
