@@ -1,30 +1,32 @@
 
 Welcome to the Prototyping Lab, updated for the Spring 2019 term.
 
-We're going to learn how to play, experiment, learn and tinker -- all with the goal of building new ways to experience and consume information. This is a hands-on class, and participation is key. Let's have some fun and make great things.
+Product-making is exceptionally important to journalism, especially today. This class is an excellent opportunity to get experience building and testing product experiments. 
+
+We're going to learn how to play, experiment, learn, and tinker as we toy with new ways to experience and consume information. This is a hands-on class, and participation is key. Let's have some fun and make great things -- or at least learn a lot trying.
 
 # The Fine Print
 
-The class description, logistics, rules, and grading are in a document I call "[the fine print](./THE_FINE_PRINT.md)."
+The class description, logistics, rules, and grading details are in a document I call "[the fine print](./THE_FINE_PRINT.md)."
 
-# The Fun Part
+# The Plan
 
-Also known as the Syllabus, here's the rundown of what we'll cover in our weeks together.
+Also known as the syllabus, here's the rundown of what we'll cover in our weeks together.
 
 ## Make bots to do your bidding
 
 - Every time Donald Trump tweets, put it in a spreadsheet
 - Every time it's at or below 32 degrees send a tweet
 - Whenever someone posts on their blog, get an email
-- Whenever papers are filed in a court case appears, get an email 
+- Whenever papers are filed in a court case, get an email 
 - Make Alexa tweet for you
 - When something happens in the digital world, make something happen in the physical world
 
-All this and more is possible with a service called [IFTTT](https://ifttt.com). We'll play with it to learn about API's.
+All this and more is possible without any coding at all. We'll make theses mini-products and learn about mashing up existing services into new prototypes that (maybe) never existed before.
 
 ## Valuable data is everywhere. Let's get it.
 
-Weather info, crypto prices, earthquake alerts -- it's all available on the internet, and ready to be shaped into a new product nobody's made before you did. We'll learn how to find and use that data.
+Weather info, crypto prices, earthquake alerts -- it's all available, and ready to be shaped into a new product nobody's made before you did. We'll learn how to find and use that data.
 
 ## Making quick and dirty dashboards
 
