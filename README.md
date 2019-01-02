@@ -72,5 +72,5 @@ When it's time for your prototype to become production-worthy, you'll need scale
 
 ## Your project progress
 
-Most weeks we will devote a part of class to talk about your ideas for prototypes and your progress toward your final presentation.
+Most weeks we will devote a part of class to talk about your ideas and progress on a prototyping project, and your preparation for your final presentation.
 

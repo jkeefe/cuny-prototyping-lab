@@ -20,15 +20,19 @@ We're going to learn how to play, experiment, learn and tinker -- all with the g
 
 We meet every Wednesday from 5:30 to 8:20 pm, including a break. Since we're at prime dinner time, feel free to bring food and drink to the extent allowed in the classroom. 
 
+There will be assignments most weeks, usually due by noon on the day of the next class.
+
+One of the assignments will be a detailed description of what you envision for your prototyping project. That description will be due **April 3, 2019**.
+
 Individual project planning sessions will be scheduled for **Monday, April 8, 2019**. 
 
 There is **no class on April 17, 2019** because I'll be off site.
 
 There is **no class on April 24, 2019** for Spring break.
 
-**Final presentation rehearsals** are May 8, 2019 in class.
+Final presentation rehearsals are **May 8, 2019** in class.
 
-**Final presentations** are May 15, 2019. Time TBD.
+Final presentations are **May 15, 2019**. Time TBD.
 
 ### Computers in Class
 
@@ -48,24 +52,28 @@ Our Slack is [cunylab.slack.com](https://cunylab.slack.com)
 
 Most weeks will have one assignment, due to me via Slack by noon the day of our next class. Feedback on each assignment will be provided every week in class or via Slack.
 
-## Presentations
+## Project & Presentation
 
-The last week of class will include presentations and a discussion about your prototyping path. Your greatest success will be secured if you _document the process_, _show your work_ and _explain your thinking_. This is not about having a finished product, it's about having a working prototype and an explanation of how you got there.
+From the first day of class, you should be thinking about what you'd like to make. Maybe its an idea you get from the class discussion. Maybe it's a part of your degree project. Maybe it's a component of a project you've already started. Maybe it's just something fun you'd like to build. 
 
-Specifically, you'll want to show:
+By mid term, you should have a plan in hand -- in fact, you'll have to hand it in. The latter part of the term you will be expected to work on that project on your own time, though in-class discussion and office-hours guidance will be available.
+
+The last week of class you will present your prototyping path and show your results. Your greatest success will be secured if you _document the process_, _show your work_ and _explain your thinking_. This is not about having a finished product, it's about having a working prototype and an explanation of how you got there.
+
+Specifically, you'll need to show:
 
 * Your intended audience and initial goal
-* Your key prototyping stages
-* The key feedback you got
+* Your key prototyping steps
+* How you shared it with others, and the key feedback you got
 * What worked, what didn't work, and changes you made
 * A demo of your prototype
 * Your next steps
 
-To make this incredibly easy to pull off, I highly recommend you keep a log, diary, notebook, blog, or text file that tracks your thinking along the way. Just keep a chronological document tracking:
+To make this incredibly easy to pull off, I highly recommend you keep a log, diary, notebook, blog, Google document, or plain old text file that tracks your thinking along the way. Just keep a chronological document noting:
 
 - Your latest ideas for what you'd like to try building
 - The links, documents, and videos you check out along the way
-- Screenshots or phone photos of things you tried, drew, built, saw
+- Screenshots or photos of things you tried, drew, built, saw
 - Steps you took, things that worked, things that didn't
 - Your changes in direction, your narrowing of focus, your flat-out failures
 
@@ -75,10 +83,10 @@ If you actually pull that information together every week, by the end of class t
 
 There are 100 points possible in this class.
 
-* **Attendance:** 15 points possible, 1 point for each class or planning session attended. 
-* **Assignments:** 20 points possible, 2 points for awarded for each assignment completed. Incomplete or low-effort submissions will get a 1. Assignments not turned in by noon on the day of the class for which they were assigned will lose one point.
-* **Participation & Progress:** 30 points possible. This will be scored based on your active participation in class and your active progress on your projects. Note that absences will naturally cut into your participation score.
 * **Final presentation:** 30 points possible, based on the criteria set out above.
+* **Attendance:** 30 points possible, 2 points for each class or planning session attended. 
+* **Assignments:** 20 points possible, 2 points for awarded for each assignment completed. Incomplete or low-effort submissions will get a 1. Assignments not turned in by noon on the day of the class for which they were assigned will lose one point.
+* **Participation & Progress:** 20 points possible. This will be scored based on your active participation in class and your active progress on your project. Note that absences will naturally cut into your participation score.
 
 | Points | Grade |
 | ------ | ----- |
