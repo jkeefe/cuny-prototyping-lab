@@ -22,17 +22,17 @@ Also known as the Syllabus, here's the rundown of what we'll cover in our weeks 
 
 All this and more is possible with a service called [IFTTT](https://ifttt.com). We'll play with it to learn about API's.
 
-## Information is everywhere. Let's get it.
+## Valuable data is everywhere. Let's get it.
 
-We'll get the hang of nabbing information from APIs -- which stands for Application Program Interfaces, but which I like to call "Another Person's Information." 
+Weather info, crypto prices, earthquake alerts -- it's all available on the internet, and ready to be shaped into a new product nobody's made before you did. We'll learn how to find and use that data.
 
 ## Making quick and dirty dashboards
 
 From web site analytics to stock prices, making dashboards to track your numbers may be the most important product you build, even if just for yourself. We'll use APIs and spreadsheets to make 'em fast.
 
-## Rolling your own data service
+## Roll your own information service
 
-When your project needs to blend existing APIs, or relies on custom data only you have, you may need to get into some code. We'll use Glitch to play with some examples (no coding experience necessary.)
+When your project needs to blend existing information, or relies on custom data only you have, you may need to get into some code. We'll use Glitch to play with some examples (no coding experience necessary.)
 
 ## Alexa, what's a digital assistant?
 
@@ -46,7 +46,7 @@ Building a whole Alexa skill just to test it out on your friends or possible cus
 
 Texting or chatting with bots is one way to communicate with your audience. We'll learn the dos and don'ts of automated conversations -- and then we'll do one.
 
-## Say what? Computers are getting good at understanding human language
+## Say what? Computers understanding human language
 
 Automatically processing what someone is saying -- either in a chat, to a voice assistant, or in an email -- is increasingly possible thanks to machine learning. We'll play with one of these natural language processing tools (Dialogflow) to get a handle on how to make it work for you.
 
