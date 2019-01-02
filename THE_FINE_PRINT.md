@@ -1,6 +1,6 @@
-# Syllabus
+# The Fine Print
 
-Welcome to the prototyping lab! 
+Here's what you need to know to succeed in this class.
 
 ## Class Description
 
