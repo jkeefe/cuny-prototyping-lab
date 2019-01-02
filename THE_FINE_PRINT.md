@@ -2,10 +2,6 @@
 
 Welcome to the prototyping lab! 
 
-## Schedule
-
-The schedule for the current class is [here](SCHEDULE.md).
-
 ## Class Description
 
 How to get journalism to audiences has been a challenge for decades. And with the unconventional presidency of Donald Trump, that's become an even bigger question for news organizations. Come explore what's next in news delivery and prototype your ideas. Throughout the industry, we see that the ability to build journalistic products is key, not just in startups from Vox to Quartz but also in big media companies of all sorts, from The New York Times to CNN to WNYC to a metro newspaper. This class will help you imagine and prototype new products and services -- and in the process reimagine journalism itself and how it connects with and serves the public. 
@@ -20,11 +16,25 @@ We're going to learn how to play, experiment, learn and tinker -- all with the g
 
 ## Logistics
 
+### The Schedule
+
+We meet every Wednesday from 5:30 to 8:20 pm, including a break. Since we're at prime dinner time, feel free to bring food and drink to the extent allowed in the classroom. 
+
+Individual project planning sessions will be scheduled for **Monday, April 8, 2019**. 
+
+There is **no class on April 17, 2019** because I'll be off site.
+
+There is **no class on April 24, 2019** for Spring break.
+
+**Final presentation rehearsals** are May 8, 2019 in class.
+
+**Final presentations** are May 15, 2019. Time TBD.
+
 ### Computers in Class
 
-Bring them! You'll use your computer in every class.
+Bring them! You'll use your computer in almost every class.
 
-Be here now. Please don't email, tweet, chat or communicate with people outside the class while we're having class. Your participation with other classmates is key. If you must take a call or a text for an urgent issue, please step out of the room.
+Be here now. Please don't email, tweet, chat or communicate with people outside the class during class. Your participation with other classmates is key. If you must take a call or a text for an urgent issue, please step out of the room.
 
 ### Slack for Communications
 
@@ -34,25 +44,9 @@ Slack is also a great platform for experimentation and prototyping, and we'll be
 
 Our Slack is [cunylab.slack.com](https://cunylab.slack.com)
 
-### Github for Code
-
-I'll post code, examples and and class documents on Github. If you have a Github account, great. If not, don't worry. You don't need it right away (and maybe not at all), as the GitHub info is public.
-
-Our Github is [github.com/jkeefe/cuny-prototyping-lab](https://github.com/jkeefe/cuny-prototyping-lab)
-
-### Google Drive for Storage
-
-We'll also keep a Google Drive folder for easy access to shared files. We'll make sure everyone has access to that folder on the first day of class.
-
 ## Assignments
 
-Each week's assignment is due into the `Assignments Drop` Google Drive folder before the start of the next week's class. Late assignments will lose a full point.
-
-Name your assignment files with the week it was assigned and your last name. So I would label the first assignment: `week01-keefe` If the assignment consists of multiple files, put them in a folder and name it the same way.
-
-Each one should be like a blog post. Put some effort into it! Use this to lay the ground work for your final presentation.
-
-Feedback on each assignment will be provided every week via Slack.
+Most weeks will have one assignment, due to me via Slack by noon the day of our next class. Feedback on each assignment will be provided every week in class or via Slack.
 
 ## Presentations
 
@@ -67,14 +61,24 @@ Specifically, you'll want to show:
 * A demo of your prototype
 * Your next steps
 
+To make this incredibly easy to pull off, I highly recommend you keep a log, diary, notebook, blog, or text file that tracks your thinking along the way. Just keep a chronological document tracking:
+
+- Your latest ideas for what you'd like to try building
+- The links, documents, and videos you check out along the way
+- Screenshots or phone photos of things you tried, drew, built, saw
+- Steps you took, things that worked, things that didn't
+- Your changes in direction, your narrowing of focus, your flat-out failures
+
+If you actually pull that information together every week, by the end of class the presentation will almost make itself.
+
 ## Grading
 
 There are 100 points possible in this class.
 
-* **Attendance:** 30 points possible, 2 points for each class attended. 
-* **Assignments:** 30 points possible, 1-2 points for awarded for each assignment completed. Incomplete or low-effort submissions will get a 1. Assignments not turned in by the start of the class for which they were assigned will lose one point.
-* **Participation & Progress:** 30 points possible, 2 each week. This will be scored based on your active participation in class and your active progress on your projects. Note that absences will naturally cut into your participation score.
-* **Final presentation:** 10 points possible, based on the criteria set out in the syllabus.
+* **Attendance:** 15 points possible, 1 point for each class or planning session attended. 
+* **Assignments:** 20 points possible, 2 points for awarded for each assignment completed. Incomplete or low-effort submissions will get a 1. Assignments not turned in by noon on the day of the class for which they were assigned will lose one point.
+* **Participation & Progress:** 30 points possible. This will be scored based on your active participation in class and your active progress on your projects. Note that absences will naturally cut into your participation score.
+* **Final presentation:** 30 points possible, based on the criteria set out above.
 
 | Points | Grade |
 | ------ | ----- |
