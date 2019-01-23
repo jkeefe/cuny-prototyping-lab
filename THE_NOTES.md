@@ -35,13 +35,22 @@ Here's where you'll find resources and class notes for every section.
 - But TRY-worthy
 - Something you can share
 
-## The Fine Print
+### Quick Examples
+- SMS bot: `(646) 699-3322`
+- Better Weather
 
-The class description, logistics, rules, and grading details are in a document I call "[the fine print](./THE_FINE_PRINT.md)."
+## Logistics & plan
+
+- Go through the [Syllabus](./README.md).
+- The class description, logistics, rules, and grading details are in a document I call "[the fine print](./THE_FINE_PRINT.md)."
+- Grading options
+- Everyone in the Slack!
 
 # Playing with APIs
 
 ## Make bots to do your bidding
+
+IFTTT - "If this then that" - https://ifttt.com
 
 - Every time Donald Trump tweets, put it in a spreadsheet
 - Every time it's at or below 32 degrees send a tweet
@@ -68,25 +77,57 @@ When your project needs to blend existing information, or relies on custom data 
 
 Voice interfaces are popping up everywhere, and it's possible they will be key to information acquisition in the months and years to come. We'll use Glitch to build an Alexa Skill.
 
+### Examples
+
+- Cat facts
+- Weather
+- Do I need an umbrella
+- Better weather
+- Flash briefing audio
+- Flash briefing bot voice 
+
+### The making of
+
+- Alexa's architecture
+- Anatomy of an Alexa skill
+- Better weather
+
+### Make one with Glitch
+
 ## Prototyping voice conversations
  
 Building a whole Alexa skill just to test it out on your friends or possible customers is possible -- but not always necessary. We'll learn how to prototype voice conversations quickly using an audio playboard.
 
 ## Storytelling with chatbots
 
-Texting or chatting with bots is one way to communicate with your audience. We'll learn the dos and don'ts of automated conversations -- and then we'll do one.
+Texting or chatting with bots is one way to communicate with your audience. We'll learn the dos and don'ts of automated conversations -- and then we'll make one.
 
-## Machine Learning at Play
+- Eyeo preso
+- Build a bot workshop
+
+# Machine Learning at Play
 
 ## Say what? Computers understanding human language
 
 Automatically processing what someone is saying -- either in a chat, to a voice assistant, or in an email -- is increasingly possible thanks to machine learning. We'll play with one of these natural language processing tools (Dialogflow) to get a handle on how to make it work for you.
 
+- Dialogflow in console
+- Intents
+- Utterances
+- Elements / Entities / Slots
+- Pre-built intent sets
+- Training
+
+- Using in Google Assistant
+- Using as an API
+- Google spreadsheet?
+- Glitch!
+
 ## Sometimes a duck is a special duck
 
 Can you teach a computer to recognize the Mandarin duck in Central Park. Yup. Is that useful? Could be! We'll learn how, as we see how image processing and machine learning can work together on your project.
 
-## Good Product Stuff
+# Good Product Stuff
 
 ## Lots of innovation is happening in email. Yes, email.
 
