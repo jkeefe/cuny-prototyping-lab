@@ -7,13 +7,13 @@ Here's where you'll find resources and class notes for every section.
 ## Introductions
 
 - A bit about me
-    - Personal website: https://johnkeefe.net
-    - Work website: https://qz.com
-    - Quartz Bot Studio: https://bots.qz.com
-    - Quartz AI Studio: https://qz.com/1464390/
-    - Twitter: @jkeefe
+    - [Personal website](https://johnkeefe.net)
+    - [Work website](https://qz.com)
+    - [Quartz Bot Studio](https://bots.qz.com)
+    - [Quartz AI Studio](https://qz.com/1464390/)
+    - Twitter: [@jkeefe](https://twitter.com/jkeefe)
     - Email: john.keefe (at) journalism.cuny.edu
-    - Slack is better! https://cunylab.slack.com 
+    - Slack is better! [Here's our Slack](https://cunylab.slack.com).
     
 ## Products in Journalism
 
