@@ -1,3 +1,5 @@
+[The Syllabus](./README.html) | [The Fine Print](./THE_FINE_PRINT.html) | [The Notes](./THE_NOTES.html)
+
 # The Fine Print
 
 Here's what you need to know to succeed in this class.

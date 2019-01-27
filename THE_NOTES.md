@@ -1,3 +1,5 @@
+[The Syllabus](./README.html) | [The Fine Print](./THE_FINE_PRINT.html) | [The Notes](./THE_NOTES.html)
+
 # The Notes
 
 Here's where you'll find resources and class notes for every section.
@@ -47,7 +49,7 @@ Here's where you'll find resources and class notes for every section.
 - Go through the [Syllabus](./README.md).
 - The class description, logistics, rules, and grading details are in a document I call "[the fine print](./THE_FINE_PRINT.md)."
 - Grading options
-- Everyone in the Slack!
+- Everyone in the Slack! [Join here](https://join.slack.com/t/cunylab/signup) and use your school email address.
 
 # Playing with APIs
 
