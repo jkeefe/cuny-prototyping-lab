@@ -88,12 +88,11 @@ Weather info, crypto prices, earthquake alerts -- it's all available, and ready 
     - see your key
     - try your key: [`https://api.darksky.net/forecast/YOUR_KEY_HERE/40.755,-73.991`](https://api.darksky.net/forecast/YOUR_KEY_HERE/40.755,-73.991)
     - toy with the lat/lon
-    
     - Propublica's congressional api
         - https://www.propublica.org/datastore/api/propublica-congress-api
     
-    <!-- - Twilio API
-        - John Demo's how easy it is with place_call.js     -->
+- Twilio API
+    - Simple script place_call.js (run from my laptop ~/Documents/testing)
 
 ## Making quick and dirty dashboards
 
@@ -137,12 +136,13 @@ function callCoinbase() {
 - Many more great examples here: https://www.benlcollins.com/spreadsheets/starting-gas/
 - openweathermap Icons can be retrieved like this: http://openweathermap.org/img/w/10d.png
 - see https://openweathermap.org/weather-conditions for more on icons
-- 
 
 
 ## Roll your own information service
 
 When your project needs to blend existing information, or relies on custom data only you have, you may need to get into some code. We'll use Glitch to play with some examples (no coding experience necessary.)
+
+- Start with 
 
 ## Conversational Interfaces
 
