@@ -68,41 +68,32 @@ IFTTT - "If this then that" - https://ifttt.com
 
 Weather info, crypto prices, earthquake alerts -- it's all available, and ready to be shaped into a new product nobody's made before you did.
 
-- ProPublica Congressional API
-    - https://www.propublica.org/
-- darksky.net
-- MTA subway info
-        - http://datamine.mta.info/list-of-feeds
-        - http://datamine.mta.info/user/register
-        - https://github.com/aamaliaa/mta-gtfs
+- [ProPublica Congressional API](https://projects.propublica.org/api-docs/congress-api/)
+- [Dark Sky](http://darksky.net)
+- [MTA subway info](http://datamine.mta.info/list-of-feeds)
+- [Coindesk Bitcoin API](https://www.coindesk.com/api)
 
 ### Dig into some APIs
 
-    - Dark Sky API
-        - http://darksky.net/dev
-        - sign up for an account
-        - see your key
-        - try your key
-        - looks like a mess!
-            - extensions
-            - Jsonview
-        - toy with the lat/lon
+- Coindesk
+    - Deets.
+    - API call: [`https://api.coindesk.com/v1/bpi/currentprice.json`](https://api.coindesk.com/v1/bpi/currentprice.json)
+    - looks like a mess!
+        - Extensions
+        - Jsonview
+
+- Dark Sky API
+    - http://darksky.net/dev
+    - sign up for an account
+    - see your key
+    - try your key: [`https://api.darksky.net/forecast/YOUR_KEY_HERE/40.755,-73.991`](https://api.darksky.net/forecast/YOUR_KEY_HERE/40.755,-73.991)
+    - toy with the lat/lon
     
     - Propublica's congressional api
         - https://www.propublica.org/datastore/api/propublica-congress-api
     
     <!-- - Twilio API
         - John Demo's how easy it is with place_call.js     -->
-    
-    - Examine the Twitter API
-        - Authentication OAuth
-        - The wonder of libraries
-        - Look at node-twitter-api
-        - Install npm
-        - install node-twitter-api:
-            - `npm install node-twitter-api --save`
-
-
 
 ## Making quick and dirty dashboards
 
