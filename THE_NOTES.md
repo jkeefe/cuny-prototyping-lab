@@ -108,6 +108,47 @@ Weather info, crypto prices, earthquake alerts -- it's all available, and ready 
 
 From web site analytics to stock prices, making dashboards to track your numbers may be the most important product you build, even if just for yourself. We'll use APIs and spreadsheets to make 'em fast.
 
+### Google Spreadsheet Dashboards
+
+- Going to use coinbase.com
+- NYC info is: http://api.coinbase.com
+- Great dashboard info here: https://www.benlcollins.com/apps-script/beginner-apis/
+- Which is also here: https://github.com/benlcollins/apps_script_apis/blob/master/for_website/001_numbers.gs
+- We'll add in `JSON.parse(data)` to those examples
+
+
+```
+function onOpen() {
+    var ui = SpreadsheetApp.getUi();
+    ui.createMenu('API')
+      .addItem('Update Bitcoin','callCoinbase')
+      .addToUi();
+}
+
+function callCoinbase() {
+
+    // Call coinbase for the latest data
+    var response = UrlFetchApp.fetch("https://api.coinbase.com/v2/prices/spot?currency=USD");
+    Logger.log(response.getContentText());
+
+    var coinbase = JSON.parse(response.getContentText());
+    var sheet = SpreadsheetApp.getActiveSheet();
+    // sheet.getRange(1,1).setValue([coinbase.data.amount]);
+    // sheet.getRange(1,2).setValue([coinbase.data.currency]);
+    sheet.getRange(sheet.getLastRow() + 1,1).setValue([coinbase.data.amount]);
+
+}
+```
+
+
+### Extra info
+
+- Many more great examples here: https://www.benlcollins.com/spreadsheets/starting-gas/
+- openweathermap Icons can be retrieved like this: http://openweathermap.org/img/w/10d.png
+- see https://openweathermap.org/weather-conditions for more on icons
+- 
+
+
 ## Roll your own information service
 
 When your project needs to blend existing information, or relies on custom data only you have, you may need to get into some code. We'll use Glitch to play with some examples (no coding experience necessary.)
