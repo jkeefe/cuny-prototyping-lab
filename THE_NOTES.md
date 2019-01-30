@@ -41,7 +41,7 @@ Here's where you'll find resources and class notes for every section.
 
 - SMS bot: `(646) 699-3322`
 - Better Weather
-- Prototyping board
+- Hot duck
 
 
 ## Logistics & plan
@@ -144,42 +144,16 @@ function callCoinbase() {
 ### Extra info
 
 - Many more great examples here: https://www.benlcollins.com/spreadsheets/starting-gas/
-- openweathermap Icons can be retrieved like this: http://openweathermap.org/img/w/10d.png
-- see https://openweathermap.org/weather-conditions for more on icons
 
 
 ## Roll your own information service
 
 When your project needs to blend existing information, or relies on custom data only you have, you may need to get into some code. We'll use Glitch to play with some examples (no coding experience necessary.)
 
-- Start with 
+- Intro to Glitch
+- Make a state motto api
 
-## Conversational Interfaces
-
-## Alexa, what's a digital assistant?
-
-Voice interfaces are popping up everywhere, and it's possible they will be key to information acquisition in the months and years to come. We'll use Glitch to build an Alexa Skill.
-
-### Examples
-
-- Cat facts
-- Weather
-- Do I need an umbrella
-- Better weather
-- Flash briefing audio
-- Flash briefing bot voice 
-
-### The making of
-
-- Alexa's architecture
-- Anatomy of an Alexa skill
-- Better weather
-
-### Make one with Glitch
-
-## Prototyping voice conversations
- 
-Building a whole Alexa skill just to test it out on your friends or possible customers is possible -- but not always necessary. We'll learn how to prototype voice conversations quickly using an audio playboard.
+# Conversational Interfaces
 
 ## Storytelling with chatbots
 
@@ -457,6 +431,30 @@ You can allow other people to try your bot by giving them your _pste.eu_ link.
 
 (Also you may want to bookmark it at this point.)
 
+## Alexa, what's a digital assistant?
+
+Voice interfaces are popping up everywhere, and it's possible they will be key to information acquisition in the months and years to come. We'll use Dexter to build an Alexa Skill.
+
+### Examples
+
+- Cat facts
+- Weather
+- Do I need an umbrella
+- Better weather
+- Flash briefing audio
+- Flash briefing bot voice 
+
+### The making of
+
+- Alexa's architecture
+- Anatomy of an Alexa skill
+- Better weather
+
+### Make one with Dexter
+
+## Prototyping voice conversations
+ 
+Building a whole Alexa skill just to test it out on your friends or possible customers is possible -- but not always necessary. We'll learn how to prototype voice conversations quickly using an audio playboard.
 
 # Machine Learning at Play
 
