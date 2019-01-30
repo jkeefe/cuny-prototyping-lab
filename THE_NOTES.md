@@ -81,6 +81,16 @@ Weather info, crypto prices, earthquake alerts -- it's all available, and ready 
     - looks like a mess!
         - Extensions
         - Jsonview
+    - Discussion of JSON format
+        ```json
+        {
+            "color":"value",
+            "yet another key": {
+                "subsetItem1":"hello",
+                "subset item 2":"goodbye"
+            }
+        }
+        ```
 
 - Dark Sky API
     - http://darksky.net/dev
