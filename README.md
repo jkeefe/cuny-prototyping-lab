@@ -1,4 +1,4 @@
-[The Syllabus](./README.html) | [The Fine Print](./THE_FINE_PRINT.html) | [The Notes](./THE_NOTES.html)
+[The Syllabus](./README.md) | [The Fine Print](./THE_FINE_PRINT.html) | [The Notes](./THE_NOTES.html)
 
 Welcome to the Prototyping Lab, updated for the Spring 2019 term.
 

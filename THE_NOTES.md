@@ -1,4 +1,4 @@
-[The Syllabus](./README.html) | [The Fine Print](./THE_FINE_PRINT.html) | [The Notes](./THE_NOTES.html)
+[The Syllabus](./README.md) | [The Fine Print](./THE_FINE_PRINT.html) | [The Notes](./THE_NOTES.html)
 
 # The Notes
 
@@ -41,7 +41,7 @@ Here's where you'll find resources and class notes for every section.
 
 - SMS bot: `(646) 699-3322`
 - Better Weather
-- Hot duck
+- Hot duck: [hotduck.today](http://hotduck.today/)
 
 
 ## Logistics & plan
@@ -81,15 +81,21 @@ Weather info, crypto prices, earthquake alerts -- it's all available, and ready 
     - looks like a mess!
         - Extensions
         - Jsonview
-    - Discussion of JSON format
+    - Quick discussion of JSON format
         ```json
+        
+        
         {
-            "color":"value",
-            "yet another key": {
-                "subsetItem1":"hello",
-                "subset item 2":"goodbye"
-            }
+            "day": "Wednesday, January 30, 2019",
+            "currently": { "description":"SNOW" },
+            "forecast": {
+                    "condition": "COLD",
+                    "temperature": 5,
+                    "exclamations": ["Wow!","Brrr!","Careful!"]
+                }
         }
+        
+        
         ```
 
 - Dark Sky API
