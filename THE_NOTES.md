@@ -184,9 +184,13 @@ sheet.getRange(sheet.getLastRow() + 1,1).setValue([coinbase.data.amount]);
 When your project needs to blend existing information, or relies on custom data only you have, you may need to get into some code. We'll use Glitch to play with some examples (no coding experience necessary.)
 
 - Intro to Glitch
+    - https://glitch.com/edit/#!/simple-api-demo?path=README.md:1:0
 - Make a state capital api
     - Wiki list: https://simple.m.wikipedia.org/wiki/List_of_U.S._state_capitals
-- Data source is a csv
+- Data source is a tsv (tab-separated values)
+    - see 
+    - took out the commas with search-replace
+    - use Mr. Data Converter to convert to JSON - Properties
 - First human-readable (html)
 - Next, computer-readable (json)
 
