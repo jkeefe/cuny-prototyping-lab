@@ -122,28 +122,55 @@ From web site analytics to stock prices, making dashboards to track your numbers
 - Which is also here: https://github.com/benlcollins/apps_script_apis/blob/master/for_website/001_numbers.gs
 - We'll add in `JSON.parse(data)` to those examples
 
+Steps:
+
+- Open a new Google spreadsheet
+- Name it
+- Go to tools -> Script Editor
+- Name it
+- Copy and paste this block of code into the main window:
+
 
 ```
 function onOpen() {
+
+    // this code runs when the spreadsheet is opened
     var ui = SpreadsheetApp.getUi();
     ui.createMenu('API')
       .addItem('Update Bitcoin','callCoinbase')
       .addToUi();
+      
 }
 
 function callCoinbase() {
 
     // Call coinbase for the latest data
     var response = UrlFetchApp.fetch("https://api.coinbase.com/v2/prices/spot?currency=USD");
-    Logger.log(response.getContentText());
 
     var coinbase = JSON.parse(response.getContentText());
     var sheet = SpreadsheetApp.getActiveSheet();
-    // sheet.getRange(1,1).setValue([coinbase.data.amount]);
-    // sheet.getRange(1,2).setValue([coinbase.data.currency]);
-    sheet.getRange(sheet.getLastRow() + 1,1).setValue([coinbase.data.amount]);
-
+  sheet.getRange(1,1).setValue([coinbase.data.amount]);
+  
 }
+```
+
+- Let's review the code
+- Reload the page (to trigger the "onOpen" function
+- First time it runs, will ask you for permission to use the script. 
+- Try the button!
+
+More code snippets:
+
+Add the currency value ...
+
+```
+sheet.getRange(1,2).setValue([coinbase.data.currency]);
+```
+
+Make it append to the end of the list ... (calculate the "row" as the last row plus 1) ...
+
+```
+sheet.getRange(sheet.getLastRow() + 1,1).setValue([coinbase.data.amount]);
 ```
 
 
@@ -157,7 +184,11 @@ function callCoinbase() {
 When your project needs to blend existing information, or relies on custom data only you have, you may need to get into some code. We'll use Glitch to play with some examples (no coding experience necessary.)
 
 - Intro to Glitch
-- Make a state motto api
+- Make a state capital api
+    - Wiki list: https://simple.m.wikipedia.org/wiki/List_of_U.S._state_capitals
+- Data source is a csv
+- First human-readable (html)
+- Next, computer-readable (json)
 
 # Conversational Interfaces
 
