@@ -184,15 +184,17 @@ sheet.getRange(sheet.getLastRow() + 1,1).setValue([coinbase.data.amount]);
 When your project needs to blend existing information, or relies on custom data only you have, you may need to get into some code. We'll use Glitch to play with some examples (no coding experience necessary.)
 
 - Intro to Glitch
-    - https://glitch.com/edit/#!/simple-api-demo?path=README.md:1:0
-- Make a state capital api
-    - Wiki list: https://simple.m.wikipedia.org/wiki/List_of_U.S._state_capitals
-- Data source is a tsv (tab-separated values)
-    - see 
-    - took out the commas with search-replace
-    - use Mr. Data Converter to convert to JSON - Properties
-- First human-readable (html)
-- Next, computer-readable (json)
+    - [Here's my API demo project](https://glitch.com/edit/#!/simple-api-demo?path=README.md:1:0)
+    - Show it working
+- Data prep
+    - The [list of capital data]( https://simple.m.wikipedia.org/wiki/List_of_U.S._state_capitals) I got from Wikipedia.
+    - Copy-pasted the table into a text file
+    - Search-replaced the commas with blanks to take them out, because they mess things up :-)
+    - Saved as a `.tsv` file (tab-separated values). See it [here](https://glitch.com/edit/#!/simple-api-demo?path=capitals.tsv:52:0).
+    - use [Mr. Data Converter](https://shancarter.github.io/mr-data-converter/) to convert the `.tsv` data into `JSON - Properties`
+    - Copied that into a new file I called [`capitals.json`](https://glitch.com/edit/#!/simple-api-demo?path=capitals.json:50:194)
+- Add the state-lookup data part ([available here](https://github.com/jkeefe/cuny-prototyping-lab/blob/master/examples/simple-api-demo/server.js))
+- You can remix this!
 
 # Conversational Interfaces
 
