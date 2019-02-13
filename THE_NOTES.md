@@ -235,52 +235,6 @@ Texting or chatting with bots is one way to communicate with your audience. We'l
 
    - Try it in the demo phone!
 
-### Simple Question and Answer
-
-Come up with three questions a human might ask your bot, once that human knows what your bot is about.
-
-- Make all the human questions (the triggers, or `+` lines ) **lowercase**
-- In the human questions (triggers,  or `+` lines) **don't use punctuation**
-- Put a blank line between each set. See below.
-- Test your questions in the demo phone as you go.
-
-```
-+ where is star island
-- It's 10 miles off the coast of Portsmouth, New Hampshire, on the east coast of the United States.
-
-+ how do you get there
-- There are many boats that make regular trips from Portsmouth, New Hampshire.
-
-+ whats on star island
-- There's a big, old hotel. Also a marine lab, some tennis courts, an old stone chapel and a historical museum. Also lots of seagulls!
-```
-
-- Try it! Now we can test our bot in the "phone" that's on the side of the screen. Try typing your questions. They must be exact.
-
-### A little help
-
-Using a `*` means "anything" and [brackets] means it's optional. So here's a smart way to catch anyone saying the word "help" (with anything or nothing before or after "help"):
-
-```
-+ [*] help [*]
-- Just type a question, and I'll give it my best shot.
-```
-
-Also, we probably want to say something nice when there is no match. You can use the "catchall" to match anything that hasn't already matched. 
-
-```
-+ *
-- I'm sorry, I don't understand what you said.
-```
-
-Another nice trick is to add multiple `-` lines. Dexter will randomly pick from among them to reply.
-
-```
-+ *
-- I'm sorry, I don't understand what you said.
-- If that's a question, I don't know the answer yet.
-- Ooof. I don't understand. Maybe try asking in another way.
-```
 
 ### Triggers and Bot Responses
 
@@ -302,35 +256,19 @@ me anything!
 
 ```
 + whats on star island
-- There's a big, old hotel. Also a marine lab, some tennis courts,
-an old stone chapel and a historical museum. Also lots of seagulls!
+- There's a big, old hotel. Also a marine lab, some tennis courts, an old stone chapel and a historical museum. Also lots of seagulls!
 ```
 
 - There is a single carriage return at the end of a `+` command and at the end of a `-` command.
 
-### Order matters
-
-When someone types something to your bot, RiveScript will go through your bot script top to bottom until it hits a match.
+- Try adding some more questions. 
 
 ```
-+ hi there
-- Hi friend!
++ where is it
+- It's 10 miles off the coast of Portsmouth, New Hampshire.
 
-+ hi there
-- This response would never be seen.
-```
-
-This is also why we put "catchall" functions at the end.
-
-### "Pick one" from a response list
-
-- If you have multiple `-` lines after a `+` trigger, RiveScript will pick one of the `-` lines at random.
-
-```
-+ tell me a cat fact
-- Cats have four legs.
-- Cats belong to the Felidae family.
-- Dogs have owners, cats have servants.
++ how do you get there
+- There are many boats that make regular trips from Portsmouth, New Hampshire.
 ```
 
 ### Catchalls
@@ -359,28 +297,6 @@ Let's dissect this a moment, just to be clear:
 `+ * help *` ... would match only "please help me," because there are words before and after "help"; "help me" would not match.
 `+ [*] help [*]` ... matches any mention of "help," no matter if there are words before or after it -- because they are optional. So "help me" matches, as does "help" and "can you please help me?"
 
-### Publish your bot
-
-To get this ready to share, click the green "Publish Topic" button.
-
-Dexter is great about walking you through this entire process, under the "Platforms" button. 
-
-- To start, click on the "Platforms" button.
-- Choose Website.
-- Click the large block of code in the middle of the screen. It'll get copied to the clipboard.
-
-![Click on web block](../module-build-a-chatbot/images/web_code.png)
-
-We're going to put this code onto the web using a paste service. 
-
-- Go to [pste.eu](http://pste.eu).
-- Click into the big box.
-- Paste the code into the box.
-- Hit "Submit"
-- You'll get private link. Click it!
-- It looks like you now have a blank screen, but click the icon in the lower-right corner.
-- Your chat bot will appear!
-- Try it!
 
 ### Adding fun features
 
@@ -399,21 +315,21 @@ would you like to know about? ^buttons(Location, Getting There, What's on Star)
 Revise the triggers to match the buttons. Clicking a button is as if the user has _typed_ the words in that button. (Remember: No punctuation in your triggers!)
 
 ```
-+ whats on star
++ whats on star island
 - There's a big, old hotel. Also a marine lab, some tennis courts, an old stone chapel and a historical museum. Also lots of seagulls!
 ```
 
 You can also add a link!
 
 ```
-+ location
++ where is it
 - It's 10 miles off the coast of Portsmouth, New Hampshire. ^link("https://goo.gl/maps/T5qxWXTXLLF2","Star Island Map")
 ```
 
 Add a picture ...
 
 ```
-+ getting there
++ how do you get there
 - There are many boats that make regular trips from Portsmouth, New Hampshire. ... like the Thomas Laighton ^image("http://media.johnkeefe.net/class-modules/boat.jpg")
 ```
 
@@ -468,6 +384,55 @@ would you like to know about? {@ my buttons}
 
 This may seem silly, but it solves two things: You don't repeat yourself (which coders call _DRY_ code) as much, and if you happened to add a fourth or fifth option, you'd just change one line instead of several.
 
+### Order matters
+
+When someone types something to your bot, RiveScript will go through your bot script top to bottom until it hits a match.
+
+```
++ hi there
+- Hi friend!
+
++ hi there
+- This response would never be seen.
+```
+
+This is also why we put "catchall" functions at the end.
+
+### "Pick one" from a response list
+
+- If you have multiple `-` lines after a `+` trigger, RiveScript will pick one of the `-` lines at random.
+
+```
++ tell me a cat fact
+- Cats have four legs.
+- Cats belong to the Felidae family.
+- Dogs have owners, cats have servants.
+```
+
+### Publish your bot
+
+To get this ready to share, click the green "Publish Topic" button.
+
+Dexter is great about walking you through this entire process, under the "Platforms" button. 
+
+- To start, click on the "Platforms" button.
+- Choose Website.
+- Click the large block of code in the middle of the screen. It'll get copied to the clipboard.
+
+![Click on web block](../module-build-a-chatbot/images/web_code.png)
+
+We're going to put this code onto the web using a paste service. 
+
+- Go to [pste.eu](http://pste.eu).
+- Click into the big box.
+- Paste the code into the box.
+- Hit "Submit"
+- You'll get private link. Click it!
+- It looks like you now have a blank screen, but click the icon in the lower-right corner.
+- Your chat bot will appear!
+- Try it!
+
+
 ### Share it with others
 
 You can allow other people to try your bot by giving them your _pste.eu_ link. 
@@ -494,6 +459,130 @@ Voice interfaces are popping up everywhere, and it's possible they will be key t
 - Better weather
 
 ### Make one with Dexter
+
+- Start a new bot in Dexter
+- Make the first trigger `+ launchrequest` and provide a friendly introduction. This will be the entry point for your bot script.
+- Make the second trigger `+ factlist` and provide a list of facts. Remember, if there are multiple responses beginning with `-`, one will be picked at random.
+- Here's an example you can just copy-and-paste into your Dexter bot script:
+
+```
++ launchrequest
+- Here's your Star Island fact: {@ factlist}
+
++ factlist
+- Star Island is 10 miles off the coast of Portsmouth, New Hampshire.
+- The hotel on the island is called "The Oceanic."
+- There is no natural fresh water reserves on the island. Fresh water is collected from arriving boats, rainwater and a seawater desalination system.
+- The pirate Blackbeard visited once and is said to have left both treasure and his wife on the neighboring island.
+```
+
+We also need a "farewell" section to close out our Alexa session, using the shortcut: `^alexaEndSession(true)`
+
+```
++ farewell
+- You will come back. You will come back. Have a great day. ^alexaEndSession(true)
+```
+
+Finally, we need to direct every response to the farewell trigger with `{@ farewell}` at the end of every line. (If you don't, Alexa will "hang" and leave the blue ring alive. Say "Alexa, quit" to escape).
+
+So:
+
+```
++ factlist
+- Star Island is 10 miles off the coast of Portsmouth, New Hampshire. {@ farewell}
+- The hotel on the island is called "The Oceanic." {@ farewell}
+- There is no natural fresh water reserves on the island. Fresh water is collected from arriving boats, rainwater and a seawater desalination system. {@ farewell}
+- The pirate Blackbeard visited once and is said to have left both treasure and his wife on the neighboring island. {@ farewell}
+```
+
+- You can also check out my [full example script](https://github.com/jkeefe/workshops/blob/master/module-alexa-fact-skill/alexa-example.rs).
+- Click the "Publish Topic" button to make sure your edits stick!
+
+### Wiring up Alexa
+
+- Chose "Platforms" from the menu at the top of the screen
+- Chose "Alexa"
+- In the instructions, follow the link to the "Amazon Developer Console."
+- If you're not yet an Amazon developer, click the button to create your Amazon Developer Account
+    - Provide the information requested
+    - NOTE! If you have an Amazon Alexa device already, it's a lot easier down the road if you use the Amazon account (and email address) associated with that device.
+- Log into your Amazon Developer Account
+- Choose "Alexa Skills Kit"
+- Click "Add a new skill"
+- Skill type is "Custom Interaction Model" (the default)
+- Give your app a name: This will be the one users see in their Alexa app.
+- Give your app an invocation: This is the phrase people use to "open" or start your app.
+    - I'm using "Star Island Facts" for both of them
+- Leave the other settings as they are.
+- Click SAVE
+- You now have an Application ID. It probably starts with `amzn...`
+- Copy your Application ID.
+- Paste it into Dexter (make sure there are no trailing or leading spaces)
+- Click NEXT
+- Go back to your Amazon tab
+- Click NEXT to get to the "Interaction Model" page
+- Go back to Dexter
+- Turn on the "Catch-All mode" which is in Beta
+- Click Next
+
+Follow the Dexter instructions to fill out the next fields:
+- Intent Schema: Use the Dexter code
+- Custom Slot types ...
+    - Enter Type: `catchall`
+    - Enter Values: copy and paste the list of apparently random words from Dexter
+        - Click ADD
+    - Sample Utterances: `CatchAllIntent {CatchAll}`
+- Click Save
+    
+You'll need to wait for a little bit for the model to be created.
+
+- Click Next
+
+On the configuration page:
+
+- Pick "HTTPS"
+- Go back to dexter and get the "Webhook URL" and pasted it into the Alexa "Default" box
+- Click Next
+    
+On the SSL Certificate page, pick:
+
+- `My development endpoint is a sub-domain of a domain that has a wildcard certificate from a certificate authority`
+- Click SAVE then NEXT
+    
+On the Test page, make sure the skill is "Enabled"
+
+Go back to Dexter, and click NEXT until you get to the "Deploy" button. Click "Deploy."
+
+(You'll want to be sure you bot topic is published, too. Go back to the "Edit" and "Publish Topic" if you have to.)
+
+- Test it out!
+
+### Don't have an Alexa device handy?
+
+On the Alexa "Test page" you can "Enter Utterance" to test how Alexa will respond.
+
+You can see how Alexa will respond in the "Service Response" section, or you can _hear_ the response by clicking on the "Listen" button below the "Service Response" window.
+
+### If you have an Alexa device matching your developer account
+
+If you Alexa Developer Account matches the account with which you registered your Alexa device, just say the invocation phrase! In my example, it would be "Alexa, open Star Island facts."
+
+Note that if the blue ring gets stuck "on," it probably means you forgot to use `^alexaEndSession(true)` as the last thing in your script.
+
+### To invite others to try (or invite another Alexa device not tied to your dev account)
+
+To beta test on an actual Alexa device:
+
+- Must have **all** of the green checkmarks checked. 
+- That includes a 108x108 and a 512x512 px logo.
+- Invite beta testers 
+- If the Amazon account you're using for development is not the one you use for your Alexa device, then you need to invite yourself at the address you use for the device, too.
+- Beta testers visit http://alexa.amazon.com ... and should eventually get a pop-up inviting them to participate
+- Then the skill gets added.
+
+## Dexter Docs
+
+[More information here](http://docs.rundexter.com/writing/advanced/alexa/)!
 
 ## Prototyping voice conversations
  
