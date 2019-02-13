@@ -198,15 +198,9 @@ When your project needs to blend existing information, or relies on custom data 
 
 # Conversational Interfaces
 
-## Storytelling with chatbots
+## Build a chatbot
 
-Texting or chatting with bots is one way to communicate with your audience. We'll learn the dos and don'ts of automated conversations -- and then we'll make one.
-
-- Eyeo preso
-
-### Build a chatbot
-
-- Grab workshop preso
+- Walk through [this workshop preso](http://media.johnkeefe.net/chatbot-workshop)
 
 - Intro to Dexter
    - Go to [rundexter.com](http://rundexter.com)
@@ -595,6 +589,12 @@ To beta test on an actual Alexa device:
  
 Building a whole Alexa skill just to test it out on your friends or possible customers is possible -- but not always necessary. We'll learn how to prototype voice conversations quickly using an audio playboard.
 
+## Storytelling with chatbots
+
+Texting or chatting with bots is one way to communicate with your audience. We'll learn the dos and don'ts of automated conversations -- and then we'll make one.
+
+- Eyeo preso
+
 # Machine Learning at Play
 
 ## Say what? Computers understanding human language
@@ -612,6 +612,8 @@ Automatically processing what someone is saying -- either in a chat, to a voice 
 - Using as an API
 - Google spreadsheet?
 - Glitch!
+
+
 
 ## Sometimes a duck is a special duck
 
