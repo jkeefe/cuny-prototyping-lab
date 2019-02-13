@@ -297,65 +297,47 @@ Let's dissect this a moment, just to be clear:
 `+ * help *` ... would match only "please help me," because there are words before and after "help"; "help me" would not match.
 `+ [*] help [*]` ... matches any mention of "help," no matter if there are words before or after it -- because they are optional. So "help me" matches, as does "help" and "can you please help me?"
 
-
-### Adding fun features
-
-You can -- and should -- guide your user's path by providing buttons, which show up really nicely in Facebook. Here's how:
-
-- Tip! You can insert buttons, links, images, and more using the "+Insert" button at the top of the editing window.
-
-Add buttons ...
-
-```
-+ hi
-- I'm a bot that can answer your questions about Star Island. What 
-would you like to know about? ^buttons(Location, Getting There, What's on Star)
-```
-
-Revise the triggers to match the buttons. Clicking a button is as if the user has _typed_ the words in that button. (Remember: No punctuation in your triggers!)
-
-```
-+ whats on star island
-- There's a big, old hotel. Also a marine lab, some tennis courts, an old stone chapel and a historical museum. Also lots of seagulls!
-```
-
-You can also add a link!
-
-```
-+ where is it
-- It's 10 miles off the coast of Portsmouth, New Hampshire. ^link("https://goo.gl/maps/T5qxWXTXLLF2","Star Island Map")
-```
-
-Add a picture ...
-
-```
-+ how do you get there
-- There are many boats that make regular trips from Portsmouth, New Hampshire. ... like the Thomas Laighton ^image("http://media.johnkeefe.net/class-modules/boat.jpg")
-```
-
-These "shortcuts" -- what Dexter calls the commands that start with a carrot `^` aren't something you have to memorize. They're also available in the bar above your bot script by clicking "+ Insert."
-
-You can also use buttons to provide better help ...
-
-```
-+ [*] help [*]
-- Here are the things I know how to do. Just pick one! ^buttons(Location, Getting There, What's on Star)
-```
-
-### Routing
-
-Here's a new RiveScript feature for you: Routing the user to another trigger.
+### Buttons
 
 Our bot really only answers three questions. So it might make sense to provide buttons to those three things after every question.
 
-One way to do that would be to provide the button code -- `^buttons(Location, Getting There, What's on Star)` -- after every answer, like so:
+To add buttons, use the "button" button, which looks like a share icon at the top of your scripot. Position your cursor at the end of the introduction text and click the button button. Then edit the script to look like this: `^buttons(Location, Getting There, What's on Star)`
+
+**Important:** Now we have to go change the triggers for those questions to these titles. That's because clicking a button basically mimics the user _typing_ the content of the button.
+
+So:
+
+```
++ where is it
+- It's 10 miles off the coast of Portsmouth, New Hampshire.
+```
+
+... becomes ...
+
+
+```
++ location
+- It's 10 miles off the coast of Portsmouth, New Hampshire.
+```
+
+As you change the trigger names for your answers, be sure to remember: all lowercase, no punctuation
+
+Try it!
+
+### Routing
+
+You'll quickly note that to keep getting answers you have to say `hi`. It would be nice to have all of the buttons show up after every answer.
+
+To do that, _could_ add buttons after every answer, like so:
 
 ```
 + location
 - It's 10 miles off the coast of Portsmouth, New Hampshire. ^link("https://goo.gl/maps/T5qxWXTXLLF2","Star Island Map") ^buttons(Location, Getting There, What's on Star)
 ```
 
-That would certainly work. But there's a more efficient way. Let's make _one_ button trigger:
+But there's a better way. 
+
+Let's make a new trigger called `my buttons` that contains just the buttons:
 
 ```
 + my buttons
@@ -383,6 +365,31 @@ would you like to know about? {@ my buttons}
 ```
 
 This may seem silly, but it solves two things: You don't repeat yourself (which coders call _DRY_ code) as much, and if you happened to add a fourth or fifth option, you'd just change one line instead of several.
+
+### Adding fun features
+
+Add a picture ...
+
+```
++ how do you get there
+- There are many boats that make regular trips from Portsmouth, New Hampshire. ... like the Thomas Laighton ^image("http://media.johnkeefe.net/class-modules/boat.jpg")
+```
+
+You can also add a link!
+
+```
++ where is it
+- It's 10 miles off the coast of Portsmouth, New Hampshire. ^link("https://goo.gl/maps/T5qxWXTXLLF2","Star Island Map")
+```
+
+These "shortcuts" -- what Dexter calls the commands that start with a carrot `^` aren't something you have to memorize. They're also available in the bar above your bot script by clicking the little gray pictures just above your script.
+
+You can also use add buttons to "help" to make that better ...
+
+```
++ [*] help [*]
+- Here are the things I know how to do. Just pick one! ^buttons(Location, Getting There, What's on Star)
+```
 
 ### Order matters
 
