@@ -440,6 +440,40 @@ You can allow other people to try your bot by giving them your _pste.eu_ link.
 
 (Also you may want to bookmark it at this point.)
 
+### Adding "News" or other live info to your bot
+
+Dexter (and almost every bot platform) lets you incorporate API calls into your bot. The full documentation is here, but let's try a quick example.
+
+We'll get the current price of 1 Bitcoin in dollars using this Coinbase api call, which doesn't require a key: `https://api.coinbase.com/v2/prices/spot?currency=USD`
+
+This returns JSON that looks like this:
+
+```json
+{
+    "data": {
+        "base": "BTC",
+        "currency": "USD",
+        "amount": "3884.895"
+    }
+}
+```
+
+Note that using "dot notation," the value we want here is `data.amount`.
+
+In Dexter, you can get this info with this code:
+
+```
++ whats a bitcoin in dollars
+$ GET https://api.coinbase.com/v2/prices/spot?currency=USD
+- The current price of one bitcoin is ${{data.amount}} dollars.
+```
+
+Again, for more details and more complicated data handling, s[ee the Dexter documentation](http://docs.rundexter.com/writing/advanced/http-requests/). 
+
+### What if you have several bot questions where the answer could be "yes" or "no"
+
+Best to do that with **topics**, which are [described in the Dexter Docs here](http://docs.rundexter.com/writing/basics/topics/).
+
 ## Alexa, what's a digital assistant?
 
 Voice interfaces are popping up everywhere, and it's possible they will be key to information acquisition in the months and years to come. We'll use Dexter to build an Alexa Skill.
@@ -593,7 +627,7 @@ Building a whole Alexa skill just to test it out on your friends or possible cus
 
 Texting or chatting with bots is one way to communicate with your audience. We'll learn the dos and don'ts of automated conversations -- and then we'll make one.
 
-- Eyeo preso
+- Here we'll draw from the second half of my [Eyeo 2018 presentation](https://vimeo.com/287093921).
 
 # Machine Learning at Play
 
