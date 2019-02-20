@@ -635,6 +635,34 @@ Texting or chatting with bots is one way to communicate with your audience. We'l
 
 Automatically processing what someone is saying -- either in a chat, to a voice assistant, or in an email -- is increasingly possible thanks to machine learning. We'll play with one of these natural language processing tools (Dialogflow) to get a handle on how to make it work for you.
 
+### Examples to consider
+
+Yes!
+Yup.
+You bet!
+Si.
+Of course
+
+No way
+Nope
+nada
+no
+Heck no
+
+Wow
+OMG
+whoa!
+I can't believe it!
+Amazing
+
+What's the forecast in Minneapolis tomorrow?
+
+Will it rain in New York Friday?
+
+What's the temperature outside?
+
+Do I need an umbrella?
+
 - Dialogflow in console
 - Intents
 - Utterances
@@ -644,9 +672,7 @@ Automatically processing what someone is saying -- either in a chat, to a voice 
 
 - Using in Google Assistant
 - Using as an API
-- Google spreadsheet?
-- Glitch!
-
+- Dexter
 
 
 ## Sometimes a duck is a special duck
