@@ -635,45 +635,97 @@ Texting or chatting with bots is one way to communicate with your audience. We'l
 
 Automatically processing what someone is saying -- either in a chat, to a voice assistant, or in an email -- is increasingly possible thanks to machine learning. We'll play with one of these natural language processing tools (Dialogflow) to get a handle on how to make it work for you.
 
-### Examples to consider
+## Intents
 
-Yes!
-Yup.
-You bet!
-Si.
-Of course
+Having your bot (or any conversational software) understand "yes" is pretty clear. But what if people say yes differently?
 
-No way
-Nope
-nada
-no
-Heck no
+- Yes!
+- Yup.
+- You bet!
+- Si.
+- Of course
 
-Wow
-OMG
-whoa!
-I can't believe it!
-Amazing
+You can teach it that _phrases like this_ mean "yes." So we could call this intent `chitchat-yes`.
 
-What's the forecast in Minneapolis tomorrow?
+- No way
+- Nope
+- nada
+- no
+- Heck no
 
-Will it rain in New York Friday?
+If we see words like the above, we could say these are `chitchat-no`.
 
-What's the temperature outside?
+- Wow
+- OMG
+- whoa!
+- I can't believe it!
+- Amazing
 
-Do I need an umbrella?
+And words like these could mean the `chitchat-wow` intent.
+
+So you could make bot responses to those _intents_ instead of those words, and let the Natural Language Processor decide which intent is, um, intended.
+
+## Utterances
+
+Also called "Training Phrases" (Dialogflow).
+
+Those are all the things a human might say that mean the same intent. So: 
+
+- Wow
+- OMG
+- whoa!
+- I can't believe it!
+- Amazing
+
+... are all _utterances_ for the `chitchat-wow` intent. The more utterances, the better the NLP learns.
+
+## Training
+
+Interestingly, most natural language systems allow you to review its decisions and _train_ it when it performed well and performed poorly.
+
+## More intents
+
+Consider the intents for the following phrases:
+
+- What's the forecast in Minneapolis tomorrow?
+- Will it rain in New York Friday?
+- What's the temperature outside?
+- Do I need an umbrella?
+
+## Entities
+
+Also called Slots (Alexa).
+
+To answer a "forecast" intent, you need two additional pieces of information: Where and when. 
+
+These are called "entities" (and also slits and elements and probably many other things).
+
+So a `weather-forcast` intent requires `place` and `time`.
+
+- What's the forecast in Minneapolis tomorrow?
+    Intent: `weather-forecast`
+    Entity Place: `minneapolis`
+    Entity Time: `tomorrow`
+    
+- Will it rain in New York Friday?
+    Intent: `weather-precipitation`
+    Entity Place: `new york`
+    Entity Time: `friday`
+
+- What's the temperature outside?
+    Intent: ?
+    Entity Place: ?
+    Entity Time: ?
+
+- Do I need an umbrella?
+    Intent: ?
+    Entity Place: ?
+    Entity Time: ?
 
 - Dialogflow in console
-- Intents
-- Utterances
-- Elements / Entities / Slots
-- Pre-built intent sets
-- Training
-
 - Using in Google Assistant
 - Using as an API
 - Dexter
-
 
 ## Sometimes a duck is a special duck
 
