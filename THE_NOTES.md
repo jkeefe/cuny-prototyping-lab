@@ -604,6 +604,14 @@ If you Alexa Developer Account matches the account with which you registered you
 
 Note that if the blue ring gets stuck "on," it probably means you forgot to use `^alexaEndSession(true)` as the last thing in your script.
 
+### Troubleshooting
+
+- Makes sure you've chosen (and saved) an invocation phrase and that doesn't contain any blocker words.
+- Make sure the invocation phrases match on Alexa and Dexter
+- click "save model" and "build model"
+- On the Dexter "Deploy" page (the airplane), make sure the little switch at the top is flipped from "undeployed" to "deployed"
+- On the Dexter "Edit" page (the pencil) make sure your bot is "Published" with the green button. 
+
 ### To invite others to try (or invite another Alexa device not tied to your dev account)
 
 To beta test on an actual Alexa device:
