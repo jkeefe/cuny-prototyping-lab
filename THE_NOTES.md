@@ -535,66 +535,27 @@ So:
 
 ### Wiring up Alexa
 
-- Chose "Platforms" from the menu at the top of the screen
-- Chose "Alexa"
-- In the instructions, follow the link to the "Amazon Developer Console."
-- If you're not yet an Amazon developer, click the button to create your Amazon Developer Account
+- If you're not already registered as an Amazon Developer, do that first. In a new tab, go to [developer.amazon.com](https://developer.amazon.com) and sign up. 
     - Provide the information requested
-    - NOTE! If you have an Amazon Alexa device already, it's a lot easier down the road if you use the Amazon account (and email address) associated with that device.
-- Log into your Amazon Developer Account
-- Choose "Alexa Skills Kit"
-- Click "Add a new skill"
-- Skill type is "Custom Interaction Model" (the default)
-- Give your app a name: This will be the one users see in their Alexa app.
-- Give your app an invocation: This is the phrase people use to "open" or start your app.
-    - I'm using "Star Island Facts" for both of them
-- Leave the other settings as they are.
-- Click SAVE
-- You now have an Application ID. It probably starts with `amzn...`
-- Copy your Application ID.
-- Paste it into Dexter (make sure there are no trailing or leading spaces)
-- Click NEXT
-- Go back to your Amazon tab
-- Click NEXT to get to the "Interaction Model" page
-- Go back to Dexter
-- Turn on the "Catch-All mode" which is in Beta
-- Click Next
+    - When asked to log in, you can use the Amazon account you use to shop on Amazon (if you do).
+    - If you have an Amazon Alexa device already, it's a lot easier down the road if you use the Amazon account (and email address) associated with that device.
+    - When asked, say you're not going to collect money for your work. (You can change this later.)
+    - Once logged in and ready to go, click on "Alexa Skills Kit," either mid-page or from the "Alexa" tab at the top of the page.
+- Head back to your bot on Dexter
+- Chose "Platforms" from the menu at the top of the screen (the paper airplane icon).
+- Chose "Alexa"
+- From here, you should [follow the instructions on this page](http://docs.rundexter.com/platforms/alexa/deploy/). Here are some important notes on that:
+    - **Skip Step 4**, and instead go to Step 5, which is the option to use a "catch-all" mode.
+    - In Step 5, the instructions should say to click "Build Model" -- which is the button you need to click.
+    - In Step 9, you "deploy" your bot from the Dexter Console. Look near the top of the page for the tiny switch that currently says "undeployed" and flip it.
 
-Follow the Dexter instructions to fill out the next fields:
-- Intent Schema: Use the Dexter code
-- Custom Slot types ...
-    - Enter Type: `catchall`
-    - Enter Values: copy and paste the list of apparently random words from Dexter
-        - Click ADD
-    - Sample Utterances: `CatchAllIntent {CatchAll}`
-- Click Save
-    
-You'll need to wait for a little bit for the model to be created.
-
-- Click Next
-
-On the configuration page:
-
-- Pick "HTTPS"
-- Go back to dexter and get the "Webhook URL" and pasted it into the Alexa "Default" box
-- Click Next
-    
-On the SSL Certificate page, pick:
-
-- `My development endpoint is a sub-domain of a domain that has a wildcard certificate from a certificate authority`
-- Click SAVE then NEXT
-    
-On the Test page, make sure the skill is "Enabled"
-
-Go back to Dexter, and click NEXT until you get to the "Deploy" button. Click "Deploy."
-
-(You'll want to be sure you bot topic is published, too. Go back to the "Edit" and "Publish Topic" if you have to.)
+One "gotcha" that affects lots of students: Be sure that your bot topic is _published_, too. To check that, o back to the "Edit" page (the pencil icon) and click "Publish Topic."
 
 - Test it out!
 
 ### Don't have an Alexa device handy?
 
-On the Alexa "Test page" you can "Enter Utterance" to test how Alexa will respond.
+Back in the Alexa tab of your browser, click to the "Test page" where you can "Enter Utterance" to test how Alexa will respond. If you allow access to your computer microphone, you can also click the microphone icon and just _talk_ to it as you would an Alexa device.
 
 You can see how Alexa will respond in the "Service Response" section, or you can _hear_ the response by clicking on the "Listen" button below the "Service Response" window.
 
@@ -606,9 +567,9 @@ Note that if the blue ring gets stuck "on," it probably means you forgot to use 
 
 ### Troubleshooting
 
-- Makes sure you've chosen (and saved) an invocation phrase and that doesn't contain any blocker words.
+- Makes sure you've chosen (and saved) an invocation phrase and that the phrase doesn't contain any blocker words.
 - Make sure the invocation phrases match on Alexa and Dexter
-- click "save model" and "build model"
+- Click "save model" and "build model"
 - On the Dexter "Deploy" page (the airplane), make sure the little switch at the top is flipped from "undeployed" to "deployed"
 - On the Dexter "Edit" page (the pencil) make sure your bot is "Published" with the green button. 
 
@@ -630,6 +591,12 @@ To beta test on an actual Alexa device:
 ## Prototyping voice conversations
  
 Building a whole Alexa skill just to test it out on your friends or possible customers is possible -- but not always necessary. We'll learn how to prototype voice conversations quickly using an audio playboard.
+
+Try the [Quartz Alexa Playboard example here](https://playboard-template.glitch.me/).
+
+Check out the [code for the playboard here](https://glitch.com/~playboard-template). You can click "remix" to make your own copy to play with.
+
+Read more about how to build this playboard in the [Quartz Bot Studio blog post](https://bots.qz.com/986/relatively-rapid-prototyping-for-voice/) about it.
 
 ## Storytelling with chatbots
 
@@ -736,9 +703,13 @@ So a `weather-forcast` intent requires `place` and `time`.
 
 Slots are a category of Entity. So `city` is a slot, and `minneapolis` is the entity.
 
+### Actions
+
+In Dialogflow, you can name an "action" in addition to an intent. The action is the name of something that should be done. It can be passed along to your code.
+
 ## Dialogflow + Dexter
 
-## Introduction to ~~API.ai~~ Dialogflow
+## Introduction to Dialogflow
 
 There are lots of tools out there to use. We'll play with [Dialogflow](https://dialogflow.com) (which used to be called API.ai ... so there may be some notations here that still reference that).
 
@@ -749,19 +720,26 @@ As usual, you'll need to sign up. It's free. And you'll need a Google/Gmail acco
 - Click "Sign up for Free"
 - Log in with Google (Dialogflow is a Google product).
 - Choose "Create Agent" -- and you may need to authenticate with Google again here.
-- Name it "Blank agent"
-- Click "Create"
-- If you don't see a sidebar on the left side, click the menu icon (the three horizontal lines)
-- In the sidebar, chose "Prebuilt Agents"
-- Then in the main area, find the logo for the "Small Talk" prebuilt agent (Note, this is _not_ the "Small Talk" option in the left-side menu)
-- Click "Import" inside this Small Talk box.
-- Just leave the "Link to Google Project" line empty and hit OK
-- Wait and then click "Proceed to Agent"
-- If you don't see a sidebar on the left side, click the menu icon (the three horizontal lines)
-- This is tricky ... At the top of the sidebar, use the _drop-down_ menu to chose "Small-Talk." Again, not the "Small Talk" item that's always in the sidebar. Look for the hyphen in `Small-Talk`. That's the right one.
-- Now, to end this craziness, let's rename it. Click the gear next to `Small-Talk` (with the hyphen)
-- Call it "My-Workshop-Bot"
+- Note that you can think of "Agents" as one bot brain. What you teach one agent isn't (easily) shared with another agent.
+- Name it "MyAgent" (no spaces allowed)
+- Leave the "Link to Google Project" line empty and hit OK
+- Check the `V1 API` button (note that Version 1 won't work after October 2019)
 - Click "Save"
+
+OK, your "agent" is established.
+
+- If you don't see a sidebar on the left side, click the menu icon (the three horizontal lines)
+- In the sidebar, click on "Small Talk."
+- You'll get a new screen. Look for the "Enable" switch and turn it on
+- Click "Save"
+
+You have now turned on a bunch of default responses for common things humans say to bots.
+
+You can alter the default responses on this page, tho it would take you a while to go through them all.
+
+Try typing some things in the "Try it now" space in the upper right corner.
+
+Note that these defaults do **not** result in an _intent_. That's because we haven't made them yet. They **do** however, result in an _action_ ... which we can use in our code.
 
 ## Play a little
 
@@ -771,6 +749,8 @@ Pay close attention to the "Intent" and "Action" areas.
 
 Also try things that might be casual synonyms for "yes" and "no."
 
+Be sure to check out the 
+
 ## Connect it to your Dexter Bot
 
 - On the Dialogflow settings page, copy the "Client Access Token"
@@ -779,14 +759,14 @@ Also try things that might be casual synonyms for "yes" and "no."
 - In front of the token, add `! var apiai = Bearer ` so it looks something this:
 
 ```
-! var apiai = Bearer ab12cd34ef56ab78cd90ef12
+! var dialogflowkey = Bearer ab12cd34ef56ab78cd90ef12
 ```
 
 - Copy the code below and paste it to the bottom of your bot script:
 
 ```
 + *
-$ GET https://api.api.ai/v1/query?v=20150910&query=<call>encode_uri <star></call>&lang=en&sessionId=<get _platformId> {"headers":{"Content-Type":"application/json", "Authorization": "<bot apiai>"}}
+$ GET https://api.dialogflow.com/v1/query?v=20150910&query=<call>encode_uri <star></call>&lang=en&sessionId=<get _platformId> {"headers":{"Content-Type":"application/json", "Authorization": "<bot dialogflowkey>"}}
 - The action I detect is: ${{result.action}}
 
 > object encode_uri javascript
@@ -820,7 +800,7 @@ But what about "Can you assist me?" For that, let's handle anything the natural 
 
 ```
 + *
-$ GET https://api.api.ai/v1/query?v=20150910&query=<call>encode_uri <star></call>&lang=en&sessionId=<_platformId> {"headers":{"Content-Type":"application/json", "Authorization": "<bot apiai>"}}
+$ GET https://api.dialogflow.com/v1/query?v=20150910&query=<call>encode_uri <star></call>&lang=en&sessionId=<_platformId> {"headers":{"Content-Type":"application/json", "Authorization": "<bot dialogflowkey>"}}
 * ${{result.action}} == smalltalk.agent.can_you_help => {@ help}
 - The action I detect is: ${{result.action}}
 ```
@@ -856,7 +836,7 @@ Only issue remaining is that if the bot doesn't recognize anything it sends back
 
 ```
 + *
-$ GET https://api.api.ai/v1/query?v=20150910&query=<call>encode_uri <star></call>&lang=en&sessionId=<_platformId> {"headers":{"Content-Type":"application/json", "Authorization": "<bot apiai>"}}
+$ GET https://api.dialogflow.com/v1/query?v=20150910&query=<call>encode_uri <star></call>&lang=en&sessionId=<_platformId> {"headers":{"Content-Type":"application/json", "Authorization": "<bot dialogflowkey>"}}
 * ${{result.action}} == smalltalk.agent.can_you_help => {@ help}
 * ${{result.fulfillment.speech}} != "" => ${{result.fulfillment.speech}} 
 - Sorry, I have no idea what you just said.
@@ -868,7 +848,7 @@ If not, we get the last line. You can add more of these `-` lines to add variety
 
 ## Starting from scratch?
 
-What we just built is a good starter script, incorporating the natural language processing for catching strangeness and letting you build from scratch. If you'd like to start over, start from [this file](./a-good-start.rs).
+What we just built is a good starter script, incorporating the natural language processing for catching strangeness and letting you build from scratch. If you'd like to start over, start from [this file](https://github.com/jkeefe/workshops/blob/master/module-chatbot-add-nlp/a-good-start.rs).
 
 # Image recognition
 
