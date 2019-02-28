@@ -769,6 +769,7 @@ Be sure to check out the
 $ GET https://api.dialogflow.com/v1/query?v=20150910&query=<call>encode_uri <star></call>&lang=en&sessionId=<get _platformId> {"headers":{"Content-Type":"application/json", "Authorization": "<bot dialogflowkey>"}}
 - The action I detect is: ${{result.action}}
 
+
 > object encode_uri javascript
     return encodeURIComponent(args[0])
 < object
