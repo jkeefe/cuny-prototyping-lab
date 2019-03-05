@@ -853,9 +853,88 @@ What we just built is a good starter script, incorporating the natural language 
 
 # Image recognition
 
-### Sometimes a duck is a special duck
+## Google Vision API
+
+Let's see it at work with the [drag-and-drop](https://cloud.google.com/vision/docs/drag-and-drop) example.
+
+But for a computer to do it, we need an API key. This is not simple, but let's make it happen:
+
+- Go to https://cloud.google.com/
+- Sign in to the console with your Google account
+- Create a new project, which is probably either a button or a dropdown next to the words "Google Cloud Platform"
+- Give it any name, and complete the new-project process
+- In the sidebar, click on "APIs & Services"
+- At the top of the screen, click "+ ENABLE APIS AND SERVICES"
+- Search for "Vision"
+- Click on "Cloud Vision API"
+- Click "Manage" (or add?)
+- In the sidebar, choose "Credentials"
+- At the top of the page, choose "+ Create Credential"
+- Click the radio button for "No, I'm not using them"
+- Click "What Credentials do I need"
+- Enter a service account name (I called mine "picture-checker")
+- Use the "Select a role" dropdown. I picked Project > Viewer
+- Key type is JSON
+- Click "Continue"
+- You will likely download a file you should put in a safe place
+- Now use the dropdown "Create Credentials" and pick "API Key"
+- You should see your API Key. Copy that to the clipboard.
+- Click "CLOSE"
+- Whew!
+
+OK, let's go over to the [Glitch Google Vision demo](https://glitch.com/~google-vision-demo) I made. 
+
+- Click "Remix This" to make your own copy.
+- First off, go into the `.env` file and paste your API key right after `GOOGLE_VISION_API_KEY=` (no space)
+- While you're here, type a phrase you'll remember after `SEKRIT_URL_KEY` (but don't use spaces)
+- Click on `server.js` and I'll walk you through the code.
+
+## Sometimes a duck is a special duck
 
 Can you teach a computer to recognize the Mandarin duck in Central Park. Yup. Is that useful? Could be! We'll learn how, as we see how image processing and machine learning can work together on your project.
+
+## Using Clarifai
+
+The "hot duck" is all the rage. Let's get a computer to identify it.
+
+- Sign up for an account at https://clarfai.com
+- Click "Create New Application"
+- Name it "duck-finder"
+- Click "Create APP"
+- In the row of your app, click on the "Explore" eye
+- Here's where I uploaded a bunch of pictures of the Mandarin Duck. This can take a moment while the system processes all of the pictures you've uploaded.
+- Click the lower-left corner of each image to engage the check-mark on each one
+- Click the "+ Add Concepts" button at the bottom
+- Call the concept "hotduck"
+- Click "ADD"
+- Leave the checkbox checked to create a new model
+- Click "Done"
+- Hover over the name of the model and three dots appear •••
+- Click the ••• and chose "Train Model"
+
+For the fun of it, click on one of the images. See that Clarifai knows what the images are, generally, and also that it's been tagged "hotduck" by you.
+
+- In the upper-right corner of the screen, click on your name and then "Settings"
+- Click on "API Keys"
+- Copy the API key for your app to the clipboard
+
+OK, now we're going to use the model.
+
+- Head over to the [Glitch Demo](https://glitch.com/edit/#!/clarifai-demo) I built.
+- Make your own copy by clicking "Remix to Edit"
+- Select the `.env` file
+- Paste your API key right after the equals sign in `CLARIFAI_API_KEY=` (no spaces)
+- Write a short phrase you can remember right after `SEKRIT_URL_KEY=` (but again, no spaces)
+
+Take a look at the `server.js` file and also the `assets` directory.
+
+Try putting different urls from the `assets` directory after the `image_url` on line 29.
+
+To send that image to Clarifai and view the results, click on the "Show" button and then add the "short phrase you can remember" after the url there.
+
+Try all of the images in `assets`. Do you see an issue?
+
+
 
 # Good Product Stuff
 
